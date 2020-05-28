@@ -1,0 +1,4 @@
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\Barcode\Barcode.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\MeioMundo.Editor.Ferramentas_MarkupCompile.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\MeioMundo.Editor.Ferramentas_MarkupCompile.lref
