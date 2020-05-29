@@ -9,12 +9,14 @@ namespace MeioMundo.Editor.Ferramentas.Barcode
 {
     public class Barcode : IPlugin
     {
-        public string Nome { get => "Codigo de Barras"; set => Nome = value; }
-
+        public string Nome => "Codigo de Barras";
+        public string Descrição => "Permite Criar Codigos";
+        public string Versão => "0.0.31";
         public Barcode()
         {
 
         }
 
+        
     }
 }
