@@ -1,13 +1,7 @@
-C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\bin\Debug\MeioMundo.Editor.Ferramentas.dll
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\bin\Debug\MeioMundo.Editor.Ferramentas.pdb
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\bin\Debug\MeioMundo.Editor.API.dll
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\bin\Debug\MeioMundo.Editor.API.pdb
-C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.Properties.Resources.resources
-C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csproj.GenerateResource.cache
-C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csproj.CoreCompileInputs.cache
-C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.dll
-C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.pdb
 C:\Users\X510\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\Debug\MeioMundo.Editor.Ferramentas.dll
 C:\Users\X510\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\Debug\MeioMundo.Editor.Ferramentas.pdb
 C:\Users\hugo_\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\Debug\MeioMundo.Editor.Ferramentas.dll
@@ -22,3 +16,9 @@ C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo
 C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.pdb
 C:\Users\X510\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\Debug\Plugins\MeioMundo.Editor.Ferramentas.dll
 C:\Users\X510\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\Debug\Plugins\MeioMundo.Editor.Ferramentas.pdb
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.Properties.Resources.resources
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csproj.GenerateResource.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csproj.CoreCompileInputs.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.dll
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.pdb

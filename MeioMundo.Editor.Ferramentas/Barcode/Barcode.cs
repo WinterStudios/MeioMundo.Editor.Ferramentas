@@ -12,6 +12,9 @@ namespace MeioMundo.Editor.Ferramentas.Barcode
         public string Nome => "Codigo de Barras";
         public string Descrição => "Permite Criar Codigos";
         public string Versão => "0.0.31";
+        public string[] Args => new string[] { "Ferramentas/Gerar Codigos" };
+        public PluginType Type => PluginType.TabPage;
+
         public Barcode()
         {
 
