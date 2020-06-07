@@ -1,7 +1,7 @@
 # MeioMundo.Editor.Ferramentas
  Meio Mundo - Ferramentas
 
-[![Build Status](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME}.png?branch=master)]
+[![Build Status](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME}.png?branch=master)](https://github.com/WinterStudios/MeioMundo.Editor.Ferramentas)
 
 [![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)]
 
