@@ -11,11 +11,10 @@ namespace MeioMundo.Editor.Ferramentas.Barcode
     class BarcodeInternal : IPlugin
     {
         public string Nome => "Codigo de Barras";
-        public string Descrição => "";
+        public string Descrição => "Permite criar codigos de barras e codigos bidemensionais";
         VersionSystem IPlugin.Version => VersionSystem.SetVersion("0.0.1-alpha");
         PluginType IPlugin.Type =>  PluginType.TabPage;
         string IPlugin.args => "Ferramentas/Codigo de Barras";
-
-        object IPlugin.Object => null;
+        Type IPlugin.ObjectType => typeof(Barcode);
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E2382350-524A-44B8-8011-4AEC54A15499}</ProjectGuid>
+    <ProjectGuid>{757803AA-7836-4E1E-B4D3-CBC04337BA43}</ProjectGuid>
     <OutputType>library</OutputType>
     <RootNamespace>MeioMundo.Editor.Ferramentas</RootNamespace>
     <AssemblyName>MeioMundo.Editor.Ferramentas</AssemblyName>
@@ -70,6 +70,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barcode\Barcode.xaml.cs">
+      <DependentUpon>Barcode.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Barcode\BarcodeInternal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -99,6 +102,12 @@
       <Name>MeioMundo.Editor.API</Name>
       <Private>False</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Barcode\Barcode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

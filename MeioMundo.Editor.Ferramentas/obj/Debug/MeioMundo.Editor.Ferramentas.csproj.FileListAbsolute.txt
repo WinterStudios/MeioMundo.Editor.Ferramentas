@@ -13,3 +13,15 @@ C:\Users\X510\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\b
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
 C:\Users\X510\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\x64\Debug\Plugins\MeioMundo.Editor.Ferramentas.dll
 C:\Users\X510\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\x64\Debug\Plugins\MeioMundo.Editor.Ferramentas.pdb
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\Debug\Plugins\MeioMundo.Editor.Ferramentas.dll
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\Debug\Plugins\MeioMundo.Editor.Ferramentas.pdb
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.Properties.Resources.resources
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csproj.GenerateResource.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.csproj.CoreCompileInputs.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.dll
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.pdb
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\Barcode\Barcode.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas_MarkupCompile.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas_MarkupCompile.lref
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\Barcode\Barcode.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Debug\MeioMundo.Editor.Ferramentas.g.resources
