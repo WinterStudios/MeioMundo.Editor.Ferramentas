@@ -1,0 +1,6 @@
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\test\bin\Debug\test.dll
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\test\bin\Debug\test.pdb
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\test\obj\Debug\test.dll
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\test\obj\Debug\test.pdb
