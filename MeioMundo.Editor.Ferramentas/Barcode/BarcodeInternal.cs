@@ -3,28 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Media.Imaging;
+using MeioMundo.Editor.API;
+using MeioMundo.Editor.API.Plugin;
 
 namespace MeioMundo.Editor.Ferramentas.Barcode
 {
-    public class BarcodeInternal
+    class BarcodeInternal : IPlugin
     {
-        public enum CodeType
-        {
-            Code39,
-            EAN13
-        }
-        public struct CODE
-        {
-            public string Code { get; set; }
-            public string Descrição { get; set; }
-            public CodeType CodeType { get; set; }
-        }
+        public string Nome => "Codigo de Barras";
+        public string Descrição => "";
+        VersionSystem IPlugin.Version => VersionSystem.SetVersion("0.0.1-alpha");
+        PluginType IPlugin.Type =>  PluginType.TabPage;
+        string IPlugin.args => "Ferramentas/Codigo de Barras";
 
-        public BitmapImage GetImageCode(CODE code, Size size)
-        {
-            return null;
-        }
+        object IPlugin.Object => null;
     }
 }
