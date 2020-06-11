@@ -12,7 +12,7 @@ namespace MeioMundo.Editor.Ferramentas.Barcode
     {
         public string Nome => "Codigo de Barras";
         public string Descrição => "Permite criar codigos de barras e codigos bidemensionais";
-        VersionSystem IPlugin.Version => VersionSystem.SetVersion("0.0.1-alpha");
+        VersionSystem IPlugin.Version => VersionSystem.SetVersion("v.0.1.611-alpha.1");
         PluginType IPlugin.Type =>  PluginType.TabPage;
         string IPlugin.args => "Ferramentas/Codigo de Barras";
         Type IPlugin.ObjectType => typeof(Barcode);
