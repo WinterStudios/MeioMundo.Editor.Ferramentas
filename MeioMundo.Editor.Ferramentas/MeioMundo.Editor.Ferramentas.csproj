@@ -54,8 +54,16 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MeioMundo.Editor.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MeioMundo\MeioMundo\Meio Mundo Editor\bin\x64\Debug\MeioMundo.Editor.API.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -74,6 +82,8 @@
       <DependentUpon>Barcode.xaml</DependentUpon>
     </Compile>
     <Compile Include="Barcode\BarcodeInternal.cs" />
+    <Compile Include="Barcode\Internal\CODE_39.cs" />
+    <Compile Include="Barcode\Internal\Internal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -97,17 +107,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MeioMundo\MeioMundo\MeioMundo.Editor.API\MeioMundo.Editor.API.csproj">
-      <Project>{0585c647-5017-4546-aa03-3441e1cea7ff}</Project>
-      <Name>MeioMundo.Editor.API</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="Barcode\Barcode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Barcode\Fonts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
