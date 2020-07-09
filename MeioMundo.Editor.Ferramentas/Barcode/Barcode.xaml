@@ -7,15 +7,57 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="box" TextChanged="box_TextChanged" />
-        <Border Grid.Column="1" BorderBrush="#FF9D9D9D" BorderThickness="0" Width="300" Height="40" Background="White">
-            <Viewbox>
-                <Image x:Name="image" RenderOptions.BitmapScalingMode="HighQuality"/>
-            </Viewbox>
-        </Border>
+        <ToolBar Grid.Row="0" Grid.ColumnSpan="2">
+            <Button Content="Prevializar"/>
+        </ToolBar>
+        <DataGrid x:Name="refs_tabela" AutoGenerateColumns="False" CanUserAddRows="False" Grid.Row="1" Background="{x:Null}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="30" IsReadOnly="True"/>
+                <DataGridTextColumn Header="REF" Width="110" />
+                <DataGridTextColumn Header="Descrição" Width="*" />
+                <DataGridTextColumn Header="Qtd" Width="Auto" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Grid.Row="1" Grid.Column="1" Header="GroupBox" Margin="10,0,0,0">
+            <StackPanel>
+
+                <GroupBox Header="Descrição" >
+                    <TextBox x:Name="txt_box_Desc" Text="TextBlock"/>
+                </GroupBox>
+                <GroupBox Header="Referencia">
+                    <TextBox x:Name="UI_TB_Ref" TextWrapping="Wrap" Text="8639562952846" TextChanged="ReferenceCode_Changed"/>
+                </GroupBox>
+                <GroupBox Header="Quantidade" >
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="txt_box_Qtd" Text="1" Width="50"/>
+                        <Button Content="+" Width="15" />
+                        <Button Content="-" Width="15" />
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Tipo">
+                    <ComboBox x:Name="UI_ComboBox_typeOfCode" HorizontalAlignment="Left" Width="120">
+                    </ComboBox>
+                </GroupBox>
+                <GroupBox Header="Pré-visualização" Height="100" >
+                    <Viewbox>
+                        <Image x:Name="UI_Preview_Code" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    </Viewbox>
+                </GroupBox>
+                <Button x:Name="Add_Button" Content="Adicionar Codigo" />
+
+            </StackPanel>
+
+        </GroupBox>
+
+
+
     </Grid>
 </UserControl>

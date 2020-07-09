@@ -1,6 +1,7 @@
 ﻿using MeioMundo.Editor.Ferramentas.Barcode.Internal;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,14 +24,25 @@ namespace MeioMundo.Editor.Ferramentas.Barcode
     {
         public Barcode()
         {
-            InitializeComponent(); 
+            try
+            {
+                UI_Preview_Code = new Image();
+                InitializeComponent();
+
+            }
+            catch (Exception ex)
+            {
+                File.WriteAllText(Environment.CurrentDirectory + "/Code.txt", ex.Message);
+            }
+            
 
         }
 
-        private void box_TextChanged(object sender, TextChangedEventArgs e)
+        private void ReferenceCode_Changed(object sender, TextChangedEventArgs e)
         {
-            if(box.Text.Length > 0)
-                image.Source = CODE_39.Draw(new Internal.Internal.Code { Content = "*" +  box.Text + "*" }, new Internal.Internal.Size { Height = 80, Width = CODE_39.Chars._0.Length });
+            if(UI_TB_Ref.Text.Length > 0)
+                UI_Preview_Code.Source = CODE_39.Draw(new Internal.Internal.Code { Content = "*" + UI_TB_Ref.Text + "*" }, new Internal.Internal.Size { Height = 80, Width = CODE_39.Chars._0.Length });
         }
+
     }
 }

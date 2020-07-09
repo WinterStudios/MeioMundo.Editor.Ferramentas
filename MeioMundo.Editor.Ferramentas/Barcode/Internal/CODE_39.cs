@@ -70,18 +70,9 @@ namespace MeioMundo.Editor.Ferramentas.Barcode.Internal
 
         public struct Chars
         {
-
-            /// <summary>
-            /// *
-            /// </summary>
+            /// <value>*</value>
             public static byte[] _asterisk => new byte[] { 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1 };
-            /// <summary>
-            /// 0
-            /// </summary>
             public static byte[] _0 => new byte[] { 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1 };
-            /// <summary>
-            /// 1
-            /// </summary>
             public static byte[] _1 => new byte[] { 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1 };
             public static byte[] _2 => new byte[] { 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1 };
             public static byte[] _3 => new byte[] { 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1 };
@@ -101,12 +92,28 @@ namespace MeioMundo.Editor.Ferramentas.Barcode.Internal
             public static byte[] _H => new byte[] { 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1 };
             public static byte[] _I => new byte[] { 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1 };
             public static byte[] _J => new byte[] { 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1 };
-            public static byte[] _K => new byte[] {}
+            public static byte[] _K => new byte[] { 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1 };
+            public static byte[] _L => new byte[] { 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1 };
+            public static byte[] _M => new byte[] { 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1 };
+            public static byte[] _N => new byte[] { 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1 };
+            public static byte[] _O => new byte[] { 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1 };
+            public static byte[] _P => new byte[] { 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1 };
+            public static byte[] _Q => new byte[] { 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1 };
+            public static byte[] _R => new byte[] { 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1 };
+            public static byte[] _S => new byte[] { 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1 };
+            public static byte[] _T => new byte[] { 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1 };
+            public static byte[] _U => new byte[] { 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1 };
+            public static byte[] _V => new byte[] { 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1 };
+            public static byte[] _W => new byte[] { 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1 };
+            public static byte[] _X => new byte[] { 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1 };
+            public static byte[] _Y => new byte[] { 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1 };
+            public static byte[] _Z => new byte[] { 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1 };
             
 
 
             public static byte[] ToChar(char c)
             {
+                c = c.ToString().ToUpper().ToCharArray()[0];
                 byte[] data = new byte[] { };
                 switch (c)
                 {
@@ -132,6 +139,58 @@ namespace MeioMundo.Editor.Ferramentas.Barcode.Internal
                         return _8;
                     case '9':
                         return _9;
+                    case 'A':
+                        return _A;
+                    case 'B':
+                        return _B;
+                    case 'C':
+                        return _C;
+                    case 'D':
+                        return _D;
+                    case 'E':
+                        return _E;
+                    case 'F':
+                        return _F;
+                    case 'G':
+                        return _G;
+                    case 'H':
+                        return _H;
+                    case 'I': 
+                        return _I;
+                    case 'J':
+                        return _J;
+                    case 'K':
+                        return _K;
+                    case 'L':
+                        return _L;
+                    case 'M':
+                        return _M;
+                    case 'N':
+                        return _N;
+                    case 'O':
+                        return _O;
+                    case 'P':
+                        return _P;
+                    case 'Q':
+                        return _Q;
+                    case 'R':
+                        return _R;
+                    case 'S':
+                        return _S;
+                    case 'T':
+                        return _T;
+                    case 'U':
+                        return _U;
+                    case 'V':
+                        return _V;
+                    case 'W':
+                        return _W;
+                    case 'X':
+                        return _X;
+                    case 'Y':
+                        return _Y;
+                    case 'Z':
+                        return _Z;
                     default:
                         return new byte[] { };
                 }
