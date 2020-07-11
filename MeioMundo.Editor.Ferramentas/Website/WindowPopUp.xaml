@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Website"
         mc:Ignorable="d"
-        Title="WindowPopUp" Height="450" Width="800" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+        Title="WindowPopUp" Height="450" Width="800" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow" SizeToContent="Width">
     <Grid x:Name="grid_content">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="OK_Btn" Grid.Row="1" Content="OK" Width="100" HorizontalAlignment="Right" Click="OK_Btn_Click"/>
     </Grid>
 </Window>

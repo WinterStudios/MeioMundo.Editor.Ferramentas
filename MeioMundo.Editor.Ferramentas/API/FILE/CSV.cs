@@ -6,9 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Media;
 using MeioMundo.Editor.API;
 using MeioMundo.Editor.API.Plugin;
 using MeioMundo.Editor.Ferramentas.API.Extensions;
+using MeioMundo.Editor.Ferramentas.Website;
 using Microsoft.Win32;
 
 namespace MeioMundo.Editor.Ferramentas.API.FILE
@@ -59,14 +64,20 @@ namespace MeioMundo.Editor.Ferramentas.API.FILE
                 if(linePosition == 0)
                 {
                     string[] t_coll = GetCollunsFromLine(reader.ReadLine());
-                    for (int i = 0; i < t_coll.Length; i++)
-                    {
-                        table.Columns.Add(t_coll[i]);
-                    }
+                    tableColluns.AddRange(t_coll);
+
+
+                    // for (int i = 0; i < t_coll.Length; i++)
+                    // {
+                    //     table.Columns.Add(t_coll[i]);
+                    // }
                 }
                 string s = reader.ReadLine();
                 linePosition++;
             }
+
+            //Website.WindowPopUp window = new Website.WindowPopUp(typeof(ListView), "");
+
 
             return table;
         }
@@ -75,7 +86,7 @@ namespace MeioMundo.Editor.Ferramentas.API.FILE
         /// </summary>
         /// <param name="line"></param>
         /// <returns></returns>
-        internal static string[] GetCollunsFromLine(string line)
+        public static string[] GetCollunsFromLine(string line)
         {
             string pattern = @"(?:,|\n|^)(""(?:(?:"""")*[^""]*)*""|[^"",\n]*|(?:\n|$))";
             RegexOptions options = RegexOptions.Multiline;
@@ -85,14 +96,78 @@ namespace MeioMundo.Editor.Ferramentas.API.FILE
                 string s = m.ToString().CleanCSV();
                 _list_colls.Add(s);
             }
+
+            string[] colluns = SelectColluns(_list_colls);
+
             return _list_colls.ToArray();
         }
+
+        private static string[] SelectColluns(List<string> list_colls)
+        {
+            WindowPopUp windowPopUp = new WindowPopUp();
+
+            List<SelectColumn> selectColluns = new List<SelectColumn>();
+            for (int i = 0; i < list_colls.Count; i++)
+            {
+                SelectColumn s = new SelectColumn { name = list_colls[i], select = true };
+                selectColluns.Add(s);
+            }
+
+            DataGrid dataGrid = new DataGrid();
+            dataGrid.AutoGenerateColumns = false;
+            dataGrid.CanUserAddRows = false;
+            dataGrid.CanUserDeleteRows = false;
+            dataGrid.CanUserReorderColumns = false;
+            dataGrid.CanUserResizeColumns = false;
+            dataGrid.CanUserResizeRows = false;
+            dataGrid.CanUserSortColumns = false;
+            dataGrid.HeadersVisibility = DataGridHeadersVisibility.Column;
+
+            DataGridCheckBoxColumn checkBoxColumn = new DataGridCheckBoxColumn();
+            checkBoxColumn.Header = "Check";
+            checkBoxColumn.Binding = new Binding("select");
+            checkBoxColumn.Width = 100;
+
+            DataGridTextColumn textColumn = new DataGridTextColumn();
+            textColumn.Header = "Column";
+            textColumn.Binding = new Binding("name");
+            textColumn.Width = 300;
+            textColumn.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+
+            dataGrid.Columns.Add(checkBoxColumn);
+            dataGrid.Columns.Add(textColumn);
+            dataGrid.ItemsSource = selectColluns;
+
+            windowPopUp.grid_content.Children.Add(dataGrid);
+            windowPopUp.SetOutput(dataGrid);
+
+            if(windowPopUp.ShowDialog() == true)
+            {
+
+            }
+
+            List<string> selectCln = new List<string>();
+            for (int i = 0; i < selectColluns.Count; i++)
+            {
+                if (selectColluns[i].select)
+                    selectCln.Add(selectColluns[i].name);
+            }
+
+            return list_colls.ToArray();
+        }
+
         public class Table
         {
             public string[] Colluns { get; set; }
+        }
+        class SelectColumn
+        {
+            public string name { get; set; }
+            public bool select { get; set; }
         }
 
     }
 
     
 }
+ 
