@@ -22,7 +22,7 @@ namespace MeioMundo.Editor.Ferramentas.API.FILE
     {
         public string Nome => "CSV";
         public string Descrição => "Permite Ler CSV";
-        public VersionSystem Version => VersionSystem.SetVersion("v.0.0.1-beta.3");
+        public VersionSystem Version => VersionSystem.SetVersion("v.0.0.3-beta.3");
         public PluginType Type => PluginType.None;
         public string args => "";
         public Type ObjectType => typeof(string);
@@ -109,7 +109,7 @@ namespace MeioMundo.Editor.Ferramentas.API.FILE
             List<SelectColumn> selectColluns = new List<SelectColumn>();
             for (int i = 0; i < list_colls.Count; i++)
             {
-                SelectColumn s = new SelectColumn { name = list_colls[i], select = true };
+                SelectColumn s = new SelectColumn { name = list_colls[i], select = false, index = i };
                 selectColluns.Add(s);
             }
 
@@ -143,17 +143,20 @@ namespace MeioMundo.Editor.Ferramentas.API.FILE
 
             if(windowPopUp.ShowDialog() == true)
             {
-
+                LoadTable(selectColluns);
             }
-
-            List<string> selectCln = new List<string>();
-            for (int i = 0; i < selectColluns.Count; i++)
+            else
             {
-                if (selectColluns[i].select)
-                    selectCln.Add(selectColluns[i].name);
+                /// ---> Editor.API . Call Exception or something
             }
+            
 
             return list_colls.ToArray();
+        }
+
+        private static void LoadTable(List<SelectColumn> selectColluns)
+        {
+            throw new NotImplementedException();
         }
 
         public class Table
@@ -164,6 +167,7 @@ namespace MeioMundo.Editor.Ferramentas.API.FILE
         {
             public string name { get; set; }
             public bool select { get; set; }
+            public int index { get; set; }
         }
 
     }
