@@ -98,6 +98,16 @@
     <Compile Include="Barcode\BarcodeInternal.cs" />
     <Compile Include="Barcode\Internal\CODE_39.cs" />
     <Compile Include="Barcode\Internal\Internal.cs" />
+    <Compile Include="Documentos\DataBase\Componentes.cs" />
+    <Compile Include="Documentos\DataBase\Disciplinas.cs" />
+    <Compile Include="Documentos\DocManager.cs" />
+    <Compile Include="Documentos\DocumentosInternal.cs" />
+    <Compile Include="Documentos\Modelo_Manuais.xaml.cs">
+      <DependentUpon>Modelo_Manuais.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Documentos\UC_Documentos.xaml.cs">
+      <DependentUpon>UC_Documentos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -129,6 +139,18 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Barcode\Barcode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Documentos\Modelo_Manuais.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Documentos\UC_Documentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Documentos\ResourceDic_DataGrid_Componente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

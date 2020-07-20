@@ -1,0 +1,17 @@
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\bin\x64\Release\MeioMundo.Editor.Ferramentas.dll
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\bin\x64\Release\MeioMundo.Editor.Ferramentas.pdb
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Barcode\Barcode.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Website\ManagerStocks.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Website\WindowPopUp.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas_MarkupCompile.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas_MarkupCompile.lref
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Barcode\Barcode.baml
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Website\Dictionary1.baml
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Website\ManagerStocks.baml
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Website\WindowPopUp.baml
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.g.resources
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.Properties.Resources.resources
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.csproj.GenerateResource.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.csproj.CoreCompileInputs.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.dll
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.pdb
