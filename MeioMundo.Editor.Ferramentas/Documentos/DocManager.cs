@@ -10,9 +10,13 @@ namespace MeioMundo.Editor.Ferramentas.Documentos
 {
     public class DocManager
     {
-        public static void PrintTest()
+        public static void PrintTest(Modelo_Manuais modelo)
         {
-            Modelo_Manuais modelo = new Modelo_Manuais();
+            modelo = new Modelo_Manuais();
+            Window window = new Window();
+            window.SizeToContent = SizeToContent.WidthAndHeight;
+            window.Content = modelo;
+            window.ShowDialog();
             PrintDialog printDialog = new PrintDialog();
             if(printDialog.ShowDialog() == true)
             {

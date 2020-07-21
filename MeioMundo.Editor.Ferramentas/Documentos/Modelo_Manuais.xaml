@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <StackPanel>
+        <StackPanel Grid.Row="0">
             <Border Height="0.8cm" BorderThickness="0.5pt" Background="#FFA6A6A6" BorderBrush="#FFA6A6A6">
                 <DockPanel Margin="5,0">
                     <TextBlock FontSize="14pt" Foreground="Black" Text="11º Ano - " VerticalAlignment="Center" />
@@ -33,10 +33,10 @@
                     </DockPanel>
                 </DockPanel>
             </Border>
-            <Border Height="0.4cm" BorderThickness="0.5pt" Background="#FFFFCB23" BorderBrush="#FFA6A6A6">
+            <Border Height="0.4cm" BorderThickness="0.5pt,0" Background="#FFFFCB23" BorderBrush="#FFA6A6A6">
                 <TextBlock FontSize="9pt" Foreground="Black" Text="Componente Geral" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
-            <DataGrid x:Name="UC_DataGrid_ComponenteGeral" AutoGenerateColumns="False" HeadersVisibility="Column" Style="{DynamicResource DataGridStyle1}">
+            <DataGrid x:Name="UC_DataGrid_ComponenteGeral" Style="{StaticResource DataGridStyle1}" RowStyle="{StaticResource DataGridRowStyleM}" CellStyle="{DynamicResource DataGridCellStyleD}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="Disciplina" Binding="{Binding Disciplina}"/>
                     <DataGridTextColumn Width="*" Header="ISBN"  Binding="{Binding ISBN}"/>
@@ -45,6 +45,19 @@
                     <DataGridTextColumn Width="*" Header="Autor" Binding="{Binding Autor}"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <Border Height="0.4cm" BorderThickness="0.5pt,0" Background="#FFFFCB23" BorderBrush="#FFA6A6A6">
+                <TextBlock FontSize="9pt" Foreground="Black" Text="Componente Especifica" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <DataGrid x:Name="UC_DataGrid_ComponenteEspecifica" Style="{StaticResource DataGridStyle1}" RowStyle="{StaticResource DataGridRowStyleM}" CellStyle="{DynamicResource DataGridCellStyleD}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="Disciplina" Binding="{Binding Disciplina}"/>
+                    <DataGridTextColumn Width="*" Header="ISBN"  Binding="{Binding ISBN}"/>
+                    <DataGridTextColumn Width="2*" Header="Nome" Binding="{Binding Nome}"/>
+                    <DataGridTextColumn Width="*" Header="Editora" Binding="{Binding Editora}"/>
+                    <DataGridTextColumn Width="*" Header="Autor" Binding="{Binding Autor}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
         </StackPanel>
     </Grid>
 </UserControl>

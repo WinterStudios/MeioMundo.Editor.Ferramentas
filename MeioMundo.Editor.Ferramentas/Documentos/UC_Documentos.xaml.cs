@@ -27,7 +27,12 @@ namespace MeioMundo.Editor.Ferramentas.Documentos
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            DocManager.PrintTest();
+            DocManager.PrintTest(modelo);
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            modelo = new Modelo_Manuais();
         }
     }
 }

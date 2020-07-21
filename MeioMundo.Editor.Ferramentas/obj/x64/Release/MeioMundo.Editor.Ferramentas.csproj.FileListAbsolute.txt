@@ -15,3 +15,10 @@ C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.csproj.CoreCompileInputs.cache
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.dll
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.pdb
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Documentos\Modelo_Manuais.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Documentos\UC_Documentos.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Documentos\Modelo_Manuais.baml
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Documentos\UC_Documentos.baml
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Release\Documentos\ResourceDic_DataGrid_Componente.baml
