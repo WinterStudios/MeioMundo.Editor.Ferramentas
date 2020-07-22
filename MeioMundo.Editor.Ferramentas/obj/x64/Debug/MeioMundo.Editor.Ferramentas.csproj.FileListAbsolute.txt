@@ -25,3 +25,30 @@ C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\DataBase\MatriculasEditor.baml
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Styles\Default\DataGrid.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\x64\Debug\Plugins\MeioMundo.Editor.Ferramentas.dll
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo\MeioMundo\Meio Mundo Editor\bin\x64\Debug\Plugins\MeioMundo.Editor.Ferramentas.pdb
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Barcode\Barcode.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\DataBase\MatriculasEditor.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\Modelo_Manuais.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\UC_Documentos.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Website\ManagerStocks.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Website\WindowPopUp.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas_MarkupCompile.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas_MarkupCompile.lref
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Barcode\Barcode.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\DataBase\MatriculasEditor.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\Modelo_Manuais.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\UC_Documentos.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\ResourceDic_DataGrid_Componente.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Styles\Default\DataGrid.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Website\Dictionary1.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Website\ManagerStocks.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Website\WindowPopUp.baml
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.g.resources
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.Properties.Resources.resources
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.csproj.GenerateResource.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.csproj.CoreCompileInputs.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.dll
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.pdb

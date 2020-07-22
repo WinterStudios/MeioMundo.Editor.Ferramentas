@@ -1,6 +1,7 @@
 ﻿using MeioMundo.Editor.Ferramentas.Documentos.DataBase.Internal;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.Metadata.Edm;
 using System.IO;
 using System.Linq;
@@ -24,9 +25,11 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
     public partial class MatriculasEditor : UserControl
     {
         private string DataBasePath { get => System.IO.Directory.GetCurrentDirectory() + "\\DataBase"; }
-        private List<int> Anos { get; set; }
         private List<Livro> Livros { get; set; }
-        private List<Livro> DataGrid_Livros { get; set; }
+        private ObservableCollection<Livro> DataGrid_Livros { get; set; }
+
+
+        private bool UC_VisiualLivros { get; set; }
 
 
         public MatriculasEditor()
@@ -43,12 +46,7 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
         private void LoadUI()
         {
             UC_ComboBox_Area.Visibility = Visibility.Hidden;
-            Anos = new List<int>();
-            for (int i = 1; i <= 12; i++)
-            {
-                Anos.Add(i);
-            }
-            UC_ComboBox_AnoLectivo.ItemsSource = Anos;
+            UC_ComboBox_AnoLectivo.ItemsSource = Anos.GetNames();
             UC_ComboBox_Area.ItemsSource = Enum.GetValues(typeof(Matriculas.Area));
             UC_ComboBox_SelectData.SelectedIndex = 0;
             UC_DataDrid_Livros_Disciplina.ItemsSource = Enum.GetValues(typeof(Disciplina.Disciplinas));
@@ -63,6 +61,9 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
                 UC_ComboBox_Area.Visibility = Visibility.Visible;
             else
                 UC_ComboBox_Area.Visibility = Visibility.Hidden;
+
+            DataGrid_Livros = new ObservableCollection<Livro>(GetLivrosByYear(index));
+            
         }
 
         private void UC_ComboBox_SelectData_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -80,19 +81,23 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
         private void UC_ComboBox_SelectData_Change()
         {
             if (UC_ComboBox_SelectData.SelectedIndex == 0)
-            {
-                Livros = new List<Livro>();
-                if (File.Exists(DataBasePath + "\\Livros.json"))
-                {
-                    Livros = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Livro>>(File.ReadAllText(DataBasePath + "\\Livros.json"));
-                    //= new List<Livro>((IEnumerable<Livro>)livros);
-                }
-
-                UC_DataGrid_Livro.ItemsSource = Livros;
-                UC_DataGrid_Livro.Visibility = Visibility.Visible;
-            }
+                UI_SetVisibility_Livros(true);
         }
 
+        private void UI_SetVisibility_Livros (bool b)
+        {
+            if (b)
+            {
+                UC_Dock_UI_Livros.Visibility = Visibility.Visible;
+                
+                UC_DataGrid_Livro.ItemsSource = DataGrid_Livros;
+            }
+            else
+            {
+                UC_Dock_UI_Livros.Visibility = Visibility.Collapsed;
+            }
+            UC_VisiualLivros = b;
+        }
 
 
         private void GetLivros()
@@ -104,6 +109,13 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
                 //= new List<Livro>((IEnumerable<Livro>)livros);
             }
         }
+        private IEnumerable<Livro> GetLivrosByYear(int year)
+        {
+            if (year == 0)
+                return Livros;
+            else
+                return Livros.Where(x => x.Ano == year);
 
+        }
     }
 }

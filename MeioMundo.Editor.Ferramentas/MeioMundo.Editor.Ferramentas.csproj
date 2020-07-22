@@ -67,7 +67,7 @@
   <ItemGroup>
     <Reference Include="MeioMundo.Editor.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MeioMundo\MeioMundo\Meio Mundo Editor\bin\x64\Debug\MeioMundo.Editor.API.dll</HintPath>
+      <HintPath>..\..\MeioMundo\MeioMundo\MeioMundo.Editor.API\bin\Debug\MeioMundo.Editor.API.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -104,6 +104,7 @@
     <Compile Include="Barcode\BarcodeInternal.cs" />
     <Compile Include="Barcode\Internal\CODE_39.cs" />
     <Compile Include="Barcode\Internal\Internal.cs" />
+    <Compile Include="Documentos\DataBase\Internal\Anos.cs" />
     <Compile Include="Documentos\DataBase\Internal\Disciplinas.cs" />
     <Compile Include="Documentos\DataBase\Internal\Livro.cs" />
     <Compile Include="Documentos\DataBase\Matriculas.cs" />

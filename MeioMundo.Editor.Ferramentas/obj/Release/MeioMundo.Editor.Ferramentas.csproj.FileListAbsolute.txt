@@ -1,0 +1,7 @@
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\Barcode\Barcode.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\Website\ManagerStocks.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\Website\WindowPopUp.g.cs
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\MeioMundo.Editor.Ferramentas_MarkupCompile.cache
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\MeioMundo.Editor.Ferramentas_MarkupCompile.lref
+C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\Release\MeioMundo.Editor.Ferramentas.pdb
