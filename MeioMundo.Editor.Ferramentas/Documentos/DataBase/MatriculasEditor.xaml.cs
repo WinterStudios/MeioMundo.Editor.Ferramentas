@@ -26,6 +26,8 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
         private string DataBasePath { get => System.IO.Directory.GetCurrentDirectory() + "\\DataBase"; }
         private List<int> Anos { get; set; }
         private List<Livro> Livros { get; set; }
+        private List<Livro> DataGrid_Livros { get; set; }
+
 
         public MatriculasEditor()
         {
@@ -34,6 +36,8 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
                 Directory.CreateDirectory(DataBasePath);
             
             InitializeComponent();
+            UC_DataGrid_Livro.UpdateDefaultStyle();
+            GetLivros();
             LoadUI();
         }
         private void LoadUI()
@@ -88,5 +92,18 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
                 UC_DataGrid_Livro.Visibility = Visibility.Visible;
             }
         }
+
+
+
+        private void GetLivros()
+        {
+            Livros = new List<Livro>();
+            if (File.Exists(DataBasePath + "\\Livros.json"))
+            {
+                Livros = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Livro>>(File.ReadAllText(DataBasePath + "\\Livros.json"));
+                //= new List<Livro>((IEnumerable<Livro>)livros);
+            }
+        }
+
     }
 }

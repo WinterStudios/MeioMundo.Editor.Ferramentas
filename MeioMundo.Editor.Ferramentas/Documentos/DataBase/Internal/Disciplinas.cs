@@ -22,11 +22,6 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase.Internal
 
             Estudo_Do_Meio = 60,
 
-            PortuguesD = 0,
-            InglêsD = 1,
-            FrancêsD = 2,
-            AlemãoD = 3,
-            MatematicaD = 4
         }
     }
 }

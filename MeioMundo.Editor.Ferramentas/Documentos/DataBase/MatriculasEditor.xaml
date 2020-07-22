@@ -8,8 +8,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              MinHeight="200" MinWidth="400">
-    
-   
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/MeioMundo.Editor.Ferramentas;component/Styles/Default/DataGrid.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     
     <Grid>
         <Grid.ColumnDefinitions>
@@ -32,7 +37,7 @@
             <ComboBox x:Name="UC_ComboBox_AnoLectivo" Width="50" SelectionChanged="UC_ComboBox_AnoLectivo_SelectionChanged"/>
             <ComboBox x:Name="UC_ComboBox_Area" Width="100"/>
         </StackPanel>
-        <DataGrid x:Name="UC_DataGrid_Livro" Grid.Row="2" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="True">
+        <DataGrid x:Name="UC_DataGrid_Livro" Grid.Row="2" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="True" Style="{StaticResource DataGridStyleDefault}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" RowHeaderStyle="{DynamicResource DataGridRowHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" >
             <DataGrid.Columns>
                 <DataGridComboBoxColumn x:Name="UC_DataDrid_Livros_Disciplina" Width="150" Header="Disciplina" SelectedItemBinding="{Binding Disciplina}"/>
                 <DataGridTextColumn Width="2*" Header="Nome" Binding="{Binding Nome}"/>
