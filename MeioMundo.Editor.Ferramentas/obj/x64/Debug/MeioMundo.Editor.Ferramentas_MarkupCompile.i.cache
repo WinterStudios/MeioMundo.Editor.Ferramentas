@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-7-942731413
+8-1087533321
 
-191088091294
-18-690300662
-Barcode\Barcode.xaml;Documentos\Modelo_Manuais.xaml;Documentos\UC_Documentos.xaml;Documentos\ResourceDic_DataGrid_Componente.xaml;Website\Dictionary1.xaml;Website\ManagerStocks.xaml;Website\WindowPopUp.xaml;
+211399863036
+20-970528535
+Barcode\Barcode.xaml;Documentos\DataBase\MatriculasEditor.xaml;Documentos\Modelo_Manuais.xaml;Documentos\UC_Documentos.xaml;Documentos\ResourceDic_DataGrid_Componente.xaml;Website\Dictionary1.xaml;Website\ManagerStocks.xaml;Website\WindowPopUp.xaml;
 
-True
+False
 

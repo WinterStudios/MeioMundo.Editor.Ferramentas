@@ -1,5 +1,9 @@
-﻿using System;
+﻿using MeioMundo.Editor.Ferramentas.Documentos.DataBase;
+using Microsoft.Win32;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +36,11 @@ namespace MeioMundo.Editor.Ferramentas.Documentos
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            modelo = new Modelo_Manuais();
+            Window window = new Window();
+            MatriculasEditor editor = new MatriculasEditor();
+            window.SizeToContent = SizeToContent.Height;
+            window.Content = editor;
+            window.Show();
         }
     }
 }

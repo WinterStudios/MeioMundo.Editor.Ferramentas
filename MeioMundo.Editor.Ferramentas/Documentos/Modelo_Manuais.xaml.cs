@@ -21,17 +21,10 @@ namespace MeioMundo.Editor.Ferramentas.Documentos
     /// </summary>
     public partial class Modelo_Manuais : UserControl
     {
-        public List<DataBase.Componentes> Disciplinas { get; set; }
+
         public Modelo_Manuais()
         {
-            
-            Disciplinas = new List<DataBase.Componentes>();
-            Disciplinas.Add(new DataBase.Componentes { Disciplina = "Portugues", ISBN = "9897671265", Nome = "Caminhos 11" });
-            Disciplinas.Add(new DataBase.Componentes { Disciplina = "Inglês (cont.)", ISBN = "9780194010160", Nome = "Insight 11" });
-            Disciplinas.Add(new DataBase.Componentes { Disciplina = "Alemaão (Ini./cont.)", ISBN = "9783126062961", Nome = "Geni@klick A2" });
             InitializeComponent();
-            UC_DataGrid_ComponenteGeral.ItemsSource = Disciplinas;
-            UC_DataGrid_ComponenteEspecifica.ItemsSource = Disciplinas;
             this.UpdateLayout();
         }
     }

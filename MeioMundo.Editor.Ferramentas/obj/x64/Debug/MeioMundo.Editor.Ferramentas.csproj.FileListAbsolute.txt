@@ -21,4 +21,6 @@ C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\UC_Documentos.baml
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\ResourceDic_DataGrid_Componente.baml
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\DataBase\MatriculasEditor.g.cs
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\Documentos\DataBase\MatriculasEditor.baml
 C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\MeioMundo.Editor.Ferramentas.csprojAssemblyReference.cache
