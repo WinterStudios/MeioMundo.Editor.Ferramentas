@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MeioMundo.Editor.Ferramentas.Documentos
+namespace MeioMundo.Editor.Ferramentas.Docs.Models
 {
     /// <summary>
-    /// Interaction logic for Modelo_Manuais.xaml
+    /// Interaction logic for Matricula.xaml
     /// </summary>
-    public partial class Modelo_Manuais : UserControl
+    public partial class Matricula : UserControl
     {
-
-        public Modelo_Manuais()
+        public Matricula()
         {
             InitializeComponent();
-            this.UpdateLayout();
         }
     }
 }

@@ -103,20 +103,14 @@
     <Compile Include="Barcode\BarcodeInternal.cs" />
     <Compile Include="Barcode\Internal\CODE_39.cs" />
     <Compile Include="Barcode\Internal\Internal.cs" />
-    <Compile Include="Documentos\DataBase\Internal\Anos.cs" />
-    <Compile Include="Documentos\DataBase\Internal\Disciplinas.cs" />
-    <Compile Include="Documentos\DataBase\Internal\Livro.cs" />
-    <Compile Include="Documentos\DataBase\Matriculas.cs" />
-    <Compile Include="Documentos\DataBase\MatriculasEditor.xaml.cs">
-      <DependentUpon>MatriculasEditor.xaml</DependentUpon>
+    <Compile Include="Docs\DocsInternal.cs" />
+    <Compile Include="Docs\Modelos.cs" />
+    <Compile Include="Docs\Models\Matricula.xaml.cs">
+      <DependentUpon>Matricula.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Documentos\DocManager.cs" />
-    <Compile Include="Documentos\DocumentosInternal.cs" />
-    <Compile Include="Documentos\Modelo_Manuais.xaml.cs">
-      <DependentUpon>Modelo_Manuais.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Documentos\UC_Documentos.xaml.cs">
-      <DependentUpon>UC_Documentos.xaml</DependentUpon>
+    <Compile Include="Docs\Models\Matriculas.cs" />
+    <Compile Include="Docs\UC_DocumentosEngine.xaml.cs">
+      <DependentUpon>UC_DocumentosEngine.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -153,19 +147,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Documentos\DataBase\MatriculasEditor.xaml">
+    <Page Include="Docs\Models\Matricula.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Documentos\Modelo_Manuais.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Documentos\UC_Documentos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Documentos\ResourceDic_DataGrid_Componente.xaml">
+    <Page Include="Docs\UC_DocumentosEngine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
