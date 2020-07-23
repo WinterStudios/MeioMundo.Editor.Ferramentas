@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\hugo_\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\
+C:\Users\X510\source\repos\WinterStudios\MeioMundo.Editor.Ferramentas\MeioMundo.Editor.Ferramentas\obj\x64\Debug\
 MeioMundo.Editor.Ferramentas
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 72019043944
 
-17-1756454319
-211768314869
+181725516612
+21387326046
 Barcode\Barcode.xaml;Docs\Models\Matricula.xaml;Docs\UC_DocumentosEngine.xaml;Styles\Default\DataGrid.xaml;Website\Dictionary1.xaml;Website\ManagerStocks.xaml;Website\WindowPopUp.xaml;
 
-False
+True
 
