@@ -1,4 +1,5 @@
-﻿using MeioMundo.Editor.Ferramentas.Docs.Models;
+﻿using MeioMundo.Editor.API;
+using MeioMundo.Editor.Ferramentas.Docs.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs
     /// </summary>
     public partial class UC_DocumentosEngine : UserControl
     {
-        public static object ContentControl { get; set; }
+        public static UserControl ContentControl { get; set; }
         public UC_DocumentosEngine()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs
                 return;
 
             int index = UC_ComboBox_ModeleSelect.SelectedIndex;
+            NotificationSystem.Show(new Notification { Message = index.ToString() });
             switch (index)
             {
                 case 0:

@@ -23,6 +23,6 @@
         <GroupBox Header="Modelo" Width="150" HorizontalAlignment="Left" Style="{DynamicResource GroupBoxStyleDefault}" >
             <ComboBox x:Name="UC_ComboBox_ModeleSelect" SelectionChanged="UC_ComboBox_ModeleSelect_SelectionChanged"/>
         </GroupBox>
-        <DockPanel x:Name="UC_DockPanel_Content"/>
+        <DockPanel Grid.Row="1" x:Name="UC_DockPanel_Content" MinHeight="300" MinWidth="300"/>
     </Grid>
 </UserControl>

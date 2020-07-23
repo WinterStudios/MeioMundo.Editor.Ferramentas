@@ -5,15 +5,36 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Models"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Border>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-            </Grid>
-        </Border>
+             Height="29.7cm" Width="21cm"
+             SnapsToDevicePixels="True"
+             >
+    <Grid Margin="0.5cm">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="0.8cm"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Border Height="0.8cm" BorderThickness="0.5pt" BorderBrush="#FFA6A6A6"  Background="#FFA6A6A6">
+                <Grid Margin="0.1cm 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="UC_TextBlock_Ano" Foreground="Black" FontSize="14pt" VerticalAlignment="Center" />
+                        <TextBlock Text=" - " Foreground="Black" FontSize="14pt" VerticalAlignment="Center" />
+                        <TextBlock x:Name="UC_TextBlock_Escola" Text="Oliveira do Hospital" Foreground="Black" FontSize="14pt" FontWeight="Bold" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <TextBlock Text="Ano Letivo " Foreground="Black" FontSize="14pt" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                        <TextBlock Text="2020/2021" Foreground="Black" FontSize="14pt" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Border Height="0.4cm" Background="#FFFFCB23">
+                <TextBlock Text="Componente Geral" FontSize="9pt" Foreground="Black" HorizontalAlignment="Center"/>
+            </Border>
+        </StackPanel>
+        
     </Grid>
 </UserControl>

@@ -104,6 +104,7 @@
     <Compile Include="Barcode\Internal\CODE_39.cs" />
     <Compile Include="Barcode\Internal\Internal.cs" />
     <Compile Include="Docs\DocsInternal.cs" />
+    <Compile Include="Docs\Internal\Matriculas\Anos.cs" />
     <Compile Include="Docs\Modelos.cs" />
     <Compile Include="Docs\Models\Matricula.xaml.cs">
       <DependentUpon>Matricula.xaml</DependentUpon>
