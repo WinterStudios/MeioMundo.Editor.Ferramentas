@@ -9,7 +9,7 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase.Internal
 {
     public class Livro
     {
-        public int Ano { get; set; }
+        public int? Ano { get; set; }
         public Disciplina.Disciplinas? Disciplina { get; set; }
         public string Nome { get; set; }
         public long ISBN { get; set; }

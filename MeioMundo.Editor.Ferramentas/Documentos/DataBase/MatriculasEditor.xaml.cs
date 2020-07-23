@@ -26,7 +26,7 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
     {
         private string DataBasePath { get => System.IO.Directory.GetCurrentDirectory() + "\\DataBase"; }
         private List<Livro> Livros { get; set; }
-        private ObservableCollection<Livro> DataGrid_Livros { get; set; }
+        private List<Livro> DataGrid_Livros { get; set; }
 
 
         private bool UC_VisiualLivros { get; set; }
@@ -42,15 +42,17 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
             UC_DataGrid_Livro.UpdateDefaultStyle();
             GetLivros();
             LoadUI();
+            SetDataGridLivros(UC_ComboBox_AnoLectivo.SelectedIndex);
         }
         private void LoadUI()
         {
             UC_ComboBox_Area.Visibility = Visibility.Hidden;
             UC_ComboBox_AnoLectivo.ItemsSource = Anos.GetNames();
+            UC_ComboBox_AnoLectivo.SelectedIndex = 0;
             UC_ComboBox_Area.ItemsSource = Enum.GetValues(typeof(Matriculas.Area));
             UC_ComboBox_SelectData.SelectedIndex = 0;
-            UC_DataDrid_Livros_Disciplina.ItemsSource = Enum.GetValues(typeof(Disciplina.Disciplinas));
-
+            UC_DataGrid_ComboBox_Livros_Disciplina.ItemsSource = Enum.GetValues(typeof(Disciplina.Disciplinas));
+            UC_DataGrid_ComboBox_Livros_Ano.ItemsSource = Anos.GetNames();
             UC_ComboBox_SelectData_Change();
         }
 
@@ -62,7 +64,7 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
             else
                 UC_ComboBox_Area.Visibility = Visibility.Hidden;
 
-            DataGrid_Livros = new ObservableCollection<Livro>(GetLivrosByYear(index));
+            SetDataGridLivros(index);
             
         }
 
@@ -100,6 +102,8 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
         }
 
 
+        // 
+
         private void GetLivros()
         {
             Livros = new List<Livro>();
@@ -116,6 +120,11 @@ namespace MeioMundo.Editor.Ferramentas.Documentos.DataBase
             else
                 return Livros.Where(x => x.Ano == year);
 
+        }
+        private void SetDataGridLivros(int year)
+        {
+            DataGrid_Livros = GetLivrosByYear(year).ToList();
+            UC_DataGrid_Livro.ItemsSource = DataGrid_Livros;
         }
     }
 }

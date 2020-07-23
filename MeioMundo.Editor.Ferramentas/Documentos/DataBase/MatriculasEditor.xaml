@@ -34,13 +34,14 @@
                 <ComboBoxItem Content="Livros" />
                 <ComboBoxItem Content="Displinas"/>
             </ComboBox>
-            <ComboBox x:Name="UC_ComboBox_AnoLectivo" Width="50" SelectionChanged="UC_ComboBox_AnoLectivo_SelectionChanged"/>
+            <ComboBox x:Name="UC_ComboBox_AnoLectivo" Width="75" SelectionChanged="UC_ComboBox_AnoLectivo_SelectionChanged"/>
             <ComboBox x:Name="UC_ComboBox_Area" Width="100"/>
         </StackPanel>
         <DockPanel x:Name="UC_Dock_UI_Livros" Grid.Row="2" Grid.ColumnSpan="2" >
             <DataGrid x:Name="UC_DataGrid_Livro" AutoGenerateColumns="False" CanUserAddRows="True" Style="{StaticResource DataGridStyleDefault}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" RowHeaderStyle="{DynamicResource DataGridRowHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" >
                 <DataGrid.Columns>
-                    <DataGridComboBoxColumn x:Name="UC_DataDrid_Livros_Disciplina" Width="150" Header="Disciplina" SelectedItemBinding="{Binding Disciplina}"/>
+                    <DataGridComboBoxColumn x:Name="UC_DataGrid_ComboBox_Livros_Ano" Width="75" Header="Ano" SelectedValueBinding="{Binding Ano}"/>
+                    <DataGridComboBoxColumn x:Name="UC_DataGrid_ComboBox_Livros_Disciplina" Width="150" Header="Disciplina" SelectedItemBinding="{Binding Disciplina}"/>
                     <DataGridTextColumn Width="2*" Header="Nome" Binding="{Binding Nome}"/>
                     <DataGridTextColumn Width="100" Header="ISBN" Binding="{Binding ISBN}"/>
                     <DataGridTextColumn Width="*" Header="Autor" Binding="{Binding Autor}"/>

@@ -65,9 +65,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MeioMundo.Editor.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MeioMundo\MeioMundo\MeioMundo.Editor.API\bin\Debug\MeioMundo.Editor.API.dll</HintPath>
+    <Reference Include="MeioMundo.Editor.API">
+      <HintPath>..\..\MeioMundo\MeioMundo\Meio Mundo Editor\bin\x64\Debug\MeioMundo.Editor.API.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
