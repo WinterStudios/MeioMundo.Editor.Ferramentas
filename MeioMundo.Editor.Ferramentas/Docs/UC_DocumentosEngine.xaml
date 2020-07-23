@@ -5,13 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Docs"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="White">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/MeioMundo.Editor.Ferramentas;component/StyleManager.xaml">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/MeioMundo.Editor.Ferramentas;component/Dictionary2.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <GroupBox Header="Modelo" Width="150" HorizontalAlignment="Left">
+        <GroupBox Header="Modelo" Width="150" HorizontalAlignment="Left" Style="{DynamicResource GroupBoxStyleDefault}" >
             <ComboBox x:Name="UC_ComboBox_ModeleSelect" SelectionChanged="UC_ComboBox_ModeleSelect_SelectionChanged"/>
         </GroupBox>
         <DockPanel x:Name="UC_DockPanel_Content"/>
