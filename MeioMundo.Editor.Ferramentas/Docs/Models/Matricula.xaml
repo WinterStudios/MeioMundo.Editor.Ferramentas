@@ -8,6 +8,11 @@
              Height="29.7cm" Width="21cm"
              SnapsToDevicePixels="True"
              >
+    <UserControl.Resources>
+        <ResourceDictionary Source="/MeioMundo.Editor.Ferramentas;component/StyleManager.xaml" />
+    </UserControl.Resources>
+    
+    
     <Grid Margin="0.5cm">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -34,6 +39,15 @@
             <Border Height="0.4cm" Background="#FFFFCB23">
                 <TextBlock Text="Componente Geral" FontSize="9pt" Foreground="Black" HorizontalAlignment="Center"/>
             </Border>
+            <DataGrid x:Name="UC_DataGrid_CG" HeadersVisibility="None" Style="{StaticResource DataGridStyle_Matricula}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="3cm" Header="Disciplina" Binding="{Binding Disciplina }"/>
+                    <DataGridTextColumn Width="2.5cm" Header="ISBN" Binding="{Binding ISBN}"/>
+                    <DataGridTextColumn Width="*" Header="Titlo" Binding="{Binding Nome}"/>
+                    <DataGridTextColumn Width="3cm" Header="Autor" Binding="{Binding Autor}"/>
+                    <DataGridTextColumn Width="3cm" Header="Editora"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
         
     </Grid>

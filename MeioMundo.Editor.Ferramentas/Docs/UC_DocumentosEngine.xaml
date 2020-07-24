@@ -20,7 +20,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <GroupBox Header="Modelo" Width="150" HorizontalAlignment="Left" Style="{DynamicResource GroupBoxStyleDefault}" >
+        <GroupBox Header="Modelo" Width="150" HorizontalAlignment="Left"  >
             <ComboBox x:Name="UC_ComboBox_ModeleSelect" SelectionChanged="UC_ComboBox_ModeleSelect_SelectionChanged"/>
         </GroupBox>
         <DockPanel Grid.Row="1" x:Name="UC_DockPanel_Content" MinHeight="300" MinWidth="300"/>

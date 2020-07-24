@@ -2,7 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Styles.Default">
 
-    <BorderGapMaskConverter x:Key="BorderGapMaskConverter"/>
+    <Style TargetType="GroupBox" >
+        <Setter Property="OverridesDefaultStyle" Value="False"/>
+    </Style>
+
+
+
+    <!--<BorderGapMaskConverter x:Key="BorderGapMaskConverter"/>
     <Style x:Key="GroupBoxStyleDefault" TargetType="{x:Type GroupBox}">
         <Setter Property="BorderBrush" Value="#FFC8C8C8"/>
         <Setter Property="Foreground" Value="#FF464646"/>
@@ -44,6 +50,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
 
 </ResourceDictionary>

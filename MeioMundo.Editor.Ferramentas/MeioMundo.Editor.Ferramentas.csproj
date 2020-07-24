@@ -104,7 +104,12 @@
     <Compile Include="Barcode\Internal\CODE_39.cs" />
     <Compile Include="Barcode\Internal\Internal.cs" />
     <Compile Include="Docs\DocsInternal.cs" />
+    <Compile Include="Docs\Internal\Editor\Livros.xaml.cs">
+      <DependentUpon>Livros.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Docs\Internal\Matriculas\Anos.cs" />
+    <Compile Include="Docs\Internal\Matriculas\Componentes.cs" />
+    <Compile Include="Docs\Internal\Matriculas\Livros.cs" />
     <Compile Include="Docs\Modelos.cs" />
     <Compile Include="Docs\Models\Matricula.xaml.cs">
       <DependentUpon>Matricula.xaml</DependentUpon>
@@ -149,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dictionary2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Docs\Internal\Editor\Livros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

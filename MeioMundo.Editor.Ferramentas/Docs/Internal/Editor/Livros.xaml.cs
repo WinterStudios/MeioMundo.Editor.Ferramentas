@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MeioMundo.Editor.Ferramentas.Docs.Models
+namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Editor
 {
     /// <summary>
-    /// Interaction logic for Matricula.xaml
+    /// Interaction logic for Livros.xaml
     /// </summary>
-    public partial class Matricula : UserControl
+    public partial class Livros : UserControl
     {
-        public Matricula()
+        public Livros()
         {
             InitializeComponent();
-        }
-        public void SetVarieables(string ano)
-        {
-            UC_TextBlock_Ano.Text = ano;
         }
     }
 }

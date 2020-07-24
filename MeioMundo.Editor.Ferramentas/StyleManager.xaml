@@ -3,5 +3,6 @@
                     xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Styles/Default/GroupBox.xaml"/>
+        <ResourceDictionary Source="Styles/Default/DataGrid.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

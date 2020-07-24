@@ -23,6 +23,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs
     public partial class UC_DocumentosEngine : UserControl
     {
         public static UserControl ContentControl { get; set; }
+
         public UC_DocumentosEngine()
         {
             InitializeComponent();
