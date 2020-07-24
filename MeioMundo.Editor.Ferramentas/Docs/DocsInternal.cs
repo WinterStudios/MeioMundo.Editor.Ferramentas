@@ -17,5 +17,19 @@ namespace MeioMundo.Editor.Ferramentas.Docs
         public PluginType Type => PluginType.TabPage;
         public string args => "Ferramentas/Documentos";
         public Type ObjectType => typeof(UC_DocumentosEngine);
+
+
+
+        public static string PluginStorageDataPath
+        {
+            get
+            {
+                string d = System.IO.Directory.GetCurrentDirectory() + "/DataBase/";
+                if (!System.IO.Directory.Exists(d))
+                    System.IO.Directory.CreateDirectory(d);
+                return System.IO.Directory.GetCurrentDirectory() + "/DataBase/Books.json";
+                
+            }
+        }
     }
 }

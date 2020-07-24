@@ -5,7 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Internal.Editor"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="980">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/MeioMundo.Editor.Ferramentas;component/StyleManager.xaml" />
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*" />
@@ -13,17 +18,21 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition MinHeight="100" Height="*" />
         </Grid.RowDefinitions>
-        
-        <DataGrid x:Name="UC_DataGrid_Livros">
+
+        <Menu>
+            <MenuItem Header="Save" Click="MenuItem_Save_Click" />
+        </Menu>
+
+        <DataGrid x:Name="UC_DataGrid_Livros" Grid.Row="1" CanUserAddRows="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nome" />
-                <DataGridTextColumn Header="ISBN" />
-                <DataGridTextColumn Header="Autor" />
-                <DataGridTextColumn Header="Editora" />
-                <DataGridTextColumn Header="Disciplina" />
-                <DataGridTextColumn Header="Ano" />
+                <DataGridTextColumn Width="*" Header="Nome" Binding="{Binding Nome}" />
+                <DataGridTextColumn Width="90" Header="ISBN" Binding="{Binding ISBN}" />
+                <DataGridTextColumn Width="120" Header="Autor" Binding="{Binding Autor}" />
+                <DataGridTextColumn Width="120" Header="Editora" Binding="{Binding Editora}" />
+                <DataGridTextColumn Width="100" Header="Disciplina" Binding="{Binding Disciplina}"/>
+                <DataGridTextColumn Width="60" Header="Ano" Binding="{Binding Ano}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

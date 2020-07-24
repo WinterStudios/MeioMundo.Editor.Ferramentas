@@ -8,7 +8,8 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
 {
     public class Componentes
     {
-        public string Disciplina { get; set; }
+        private string _Disciplina;
+        public string Disciplina { get => _Disciplina; set => _Disciplina = Disciplinas.GetName(int.Parse(value)); }
         public string ISBN { get; set; }
         public string Nome { get; set; }
         public string Autor { get; set; }

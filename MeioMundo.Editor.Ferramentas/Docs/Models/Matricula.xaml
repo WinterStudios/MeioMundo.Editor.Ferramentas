@@ -39,7 +39,7 @@
             <Border Height="0.4cm" Background="#FFFFCB23">
                 <TextBlock Text="Componente Geral" FontSize="9pt" Foreground="Black" HorizontalAlignment="Center"/>
             </Border>
-            <DataGrid x:Name="UC_DataGrid_CG" HeadersVisibility="None" Style="{StaticResource DataGridStyle_Matricula}">
+            <DataGrid x:Name="UC_DataGrid_CG" HeadersVisibility="None">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="3cm" Header="Disciplina" Binding="{Binding Disciplina }"/>
                     <DataGridTextColumn Width="2.5cm" Header="ISBN" Binding="{Binding ISBN}"/>

@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Docs\Internal\Matriculas\Anos.cs" />
     <Compile Include="Docs\Internal\Matriculas\Componentes.cs" />
+    <Compile Include="Docs\Internal\Matriculas\Disciplinas.cs" />
     <Compile Include="Docs\Internal\Matriculas\Livros.cs" />
     <Compile Include="Docs\Modelos.cs" />
     <Compile Include="Docs\Models\Matricula.xaml.cs">
@@ -142,6 +143,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DataBase\Books.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

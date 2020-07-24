@@ -100,19 +100,21 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
 
         private void FillBooks()
         {
-            List<Livros> livros = new List<Livros>
-            {
-                new Livros(){ Disciplina = 11, ISBN = 1234567890123, Nome = "Caminhos 11", Autor = "QUAL", Editora = "Porto", Ano = 11 }
-            };
+            List<Componentes> componentes = new List<Componentes>();
+            componentes.Add(new Componentes { Autor = "Elisa", Disciplina = "10" });
 
-            UC_Matricula.UC_DataGrid_CG.ItemsSource = livros;
+            UC_Matricula.UC_DataGrid_CG.ItemsSource = componentes;
         }
 
 
         private void MenuItem_Editor_Livros_Click(object sender, RoutedEventArgs e)
         {
+            Internal.Editor.Livros editorL = new Internal.Editor.Livros();
             Window window = new Window();
-
+            window.Content = editorL;
+            window.SizeToContent = SizeToContent.WidthAndHeight;
+            window.ShowDialog();
+            
         }
     }
     
