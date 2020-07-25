@@ -22,29 +22,5 @@
     "ISBN": 9789897670978,
     "Editora": "Areal Editores",
     "Autor": "Angelina Rodrigues"
-  },
-  {
-    "Ano": 2,
-    "Disciplina": 10,
-    "Nome": "Eureka! - Português - 2.º Ano",
-    "ISBN": 9789897671968,
-    "Editora": "Areal Editores",
-    "Autor": "António Marcelino"
-  },
-  {
-    "Ano": 2,
-    "Disciplina": 30,
-    "Nome": "Eureka! - Matematica - 2.º Ano",
-    "ISBN": 9789897671982,
-    "Editora": "Areal Editores",
-    "Autor": "Angelina Rodrigues"
-  },
-  {
-    "Ano": 2,
-    "Disciplina": 60,
-    "Nome": "Eureka! - Estudo do Meio - 2.º Ano",
-    "ISBN": 9789897672002,
-    "Editora": "Areal Editores",
-    "Autor": "Angelina Rodrigues"
   }
 ]

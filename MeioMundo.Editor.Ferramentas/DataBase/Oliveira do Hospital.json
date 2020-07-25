@@ -1,0 +1,28 @@
+{
+  "Escola": 0,
+  "Componetes": {
+    "11": [
+      {
+        "Disciplina": 10,
+        "Nome": "Eureka! - Português - 1.º Ano",
+        "ISNB": "9789896479886",
+        "Autor": "António Marcelino",
+        "Editora": "Areal Editores"
+      },
+      {
+        "Disciplina": 30,
+        "Nome": "Eureka! - Matematica - 1.º Ano",
+        "ISNB": "9789896479909",
+        "Autor": "Angelina Rodrigues",
+        "Editora": "Areal Editores"
+      },
+      {
+        "Disciplina": 40,
+        "Nome": "Eureka! - Estudo do Meio - 1.º Ano",
+        "ISNB": "9789897670978",
+        "Autor": "Angelina Rodrigues",
+        "Editora": "Areal Editores"
+      }
+    ]
+  }
+}

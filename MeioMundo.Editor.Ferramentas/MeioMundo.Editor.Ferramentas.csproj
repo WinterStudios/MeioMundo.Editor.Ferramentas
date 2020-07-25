@@ -147,6 +147,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="DataBase\Books.json" />
+    <None Include="DataBase\Livros.json" />
+    <None Include="DataBase\Oliveira do Hospital.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

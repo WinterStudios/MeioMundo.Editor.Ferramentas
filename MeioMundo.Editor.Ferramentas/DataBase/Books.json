@@ -17,7 +17,7 @@
   },
   {
     "Ano": 11,
-    "Disciplina": 60,
+    "Disciplina": 40,
     "ISBN": 9789897670978,
     "Nome": "Eureka! - Estudo do Meio - 1.º Ano",
     "Autor": "Angelina Rodrigues",
@@ -26,9 +26,169 @@
   {
     "Ano": 12,
     "Disciplina": 10,
-    "ISBN": 9789896479886,
-    "Nome": "Eureka! - Português - 1.º Ano",
+    "ISBN": 9789897671968,
+    "Nome": "Eureka! - Português - 2.º Ano",
     "Autor": "António Marcelino",
     "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 12,
+    "Disciplina": 30,
+    "ISBN": 9789897672385,
+    "Nome": "Eureka! - Matemática - 2.º Ano",
+    "Autor": "Angelina Rodrigues",
+    "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 12,
+    "Disciplina": 40,
+    "ISBN": 9789897672392,
+    "Nome": "Eureka! - Estudo do Meio - 2.º Ano",
+    "Autor": "Angelina Rodrigues",
+    "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 13,
+    "Disciplina": 10,
+    "ISBN": 9789720850287,
+    "Nome": "Alfa - Português 3 - 3.º Ano",
+    "Autor": "Eva Lima",
+    "Editora": "Porto Editora "
+  },
+  {
+    "Ano": 13,
+    "Disciplina": 30,
+    "ISBN": 9789724747767,
+    "Nome": "A Grande Aventura - Matemática 3º ano",
+    "Autor": "Luísa Azevedo",
+    "Editora": "Texto Editores"
+  },
+  {
+    "Ano": 13,
+    "Disciplina": 40,
+    "ISBN": 9789720123046,
+    "Nome": "Alfa - Estudo do Meio - 3.º Ano",
+    "Autor": "Eva Lima",
+    "Editora": "Porto Editora"
+  },
+  {
+    "Ano": 13,
+    "Disciplina": 11,
+    "ISBN": 9789896476724,
+    "Nome": "Stars 3 - Student's Book - Inglês - 3.º Ano",
+    "Autor": "Carlos Lindade",
+    "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 14,
+    "Disciplina": 10,
+    "ISBN": 9789720112972,
+    "Nome": "Alfa - Português 4 - 4.º Ano",
+    "Autor": "Eva Lima",
+    "Editora": "Porto Editora"
+  },
+  {
+    "Ano": 14,
+    "Disciplina": 30,
+    "ISBN": 9789896477059,
+    "Nome": "Pasta Mágica - Matemática 4 - 4.º Ano",
+    "Autor": "Luísa Azevedo",
+    "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 14,
+    "Disciplina": 40,
+    "ISBN": 9789720850324,
+    "Nome": "Alfa - Estudo do Meio 4 - 4.º Ano",
+    "Autor": "Eva Lima",
+    "Editora": "Porto Editora"
+  },
+  {
+    "Ano": 14,
+    "Disciplina": 11,
+    "ISBN": 9789897671531,
+    "Nome": "Stars 4 - Inglês - 4 º Ano",
+    "Autor": "Carlos Lindade",
+    "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 21,
+    "Disciplina": 10,
+    "ISBN": 9789720855343,
+    "Nome": "Livro aberto - Português - 5.º Ano",
+    "Autor": null,
+    "Editora": "Porto Editora"
+  },
+  {
+    "Ano": 21,
+    "Disciplina": 11,
+    "ISBN": 9789897671913,
+    "Nome": "BTween 5 - Inglês - 5.º Ano",
+    "Autor": null,
+    "Editora": "Texto Editores"
+  },
+  {
+    "Ano": 21,
+    "Disciplina": 60,
+    "ISBN": 9789720204028,
+    "Nome": "HGP em Ação - História e Geografia de Portugal - 5.º Ano",
+    "Autor": null,
+    "Editora": "Porto Editora"
+  },
+  {
+    "Ano": 21,
+    "Disciplina": 30,
+    "ISBN": 9789897671104,
+    "Nome": "Novo MSI 5 - Matemática Sob Investigação - 5.º Ano",
+    "Autor": null,
+    "Editora": "Texto Editores"
+  },
+  {
+    "Ano": 21,
+    "Disciplina": 41,
+    "ISBN": 9789720206893,
+    "Nome": "CienTIC 5 - Ciências Naturais - 5.º Ano",
+    "Autor": null,
+    "Editora": "Porto Editora"
+  },
+  {
+    "Ano": 20,
+    "Disciplina": 50,
+    "ISBN": 9789724754765,
+    "Nome": "Arte de Ver - Educação Visual - 5º/6º Anos",
+    "Autor": null,
+    "Editora": "Texto Editores"
+  },
+  {
+    "Ano": 20,
+    "Disciplina": 51,
+    "ISBN": 9789724754796,
+    "Nome": "Arte de Fazer - Educação Tecnológica - 5º/6º Ano",
+    "Autor": null,
+    "Editora": "Texto Editores"
+  },
+  {
+    "Ano": 21,
+    "Disciplina": 80,
+    "ISBN": 9789724754376,
+    "Nome": "100% Música - Educação Musical - 5.º ano",
+    "Autor": null,
+    "Editora": "Texto Editores"
+  },
+  {
+    "Ano": 20,
+    "Disciplina": 84,
+    "ISBN": 9789724753874,
+    "Nome": "Fair Play - Educação Física - 5º/6º Anos",
+    "Autor": null,
+    "Editora": "Texto Editores"
+  },
+  {
+    "Ano": 21,
+    "Disciplina": 81,
+    "ISBN": 9789728690861,
+    "Nome": "Conta Comigo! - Moral - 5º Ano",
+    "Autor": null,
+    "Editora": "SNEC"
   }
 ]
