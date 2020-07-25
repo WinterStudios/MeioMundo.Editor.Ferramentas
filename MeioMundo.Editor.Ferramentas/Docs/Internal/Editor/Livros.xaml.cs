@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -36,17 +37,16 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Editor
 
         private void LoadDataBase()
         {
-            List<Matriculas.Livros> books = new List<Matriculas.Livros>();
-            Books = new List<Matriculas.Livros>();
+            if(File.Exists(DocsInternal.PluginStorageDataPath))
+                Books = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Matriculas.Livros>>(File.ReadAllText(DocsInternal.PluginStorageDataPath));
+            else
+                Books = new List<Matriculas.Livros>();
             UC_DataGrid_Livros.ItemsSource = Books;
-
-
-
         }
 
         private void MenuItem_Save_Click(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(Docs.DocsInternal.PluginStorageDataPath, Newtonsoft.Json.JsonConvert.SerializeObject(Books, Newtonsoft.Json.Formatting.Indented));
+            File.WriteAllText(Docs.DocsInternal.PluginStorageDataPath, Newtonsoft.Json.JsonConvert.SerializeObject(Books.GetSerialize(), Newtonsoft.Json.Formatting.Indented));
         }
     }
 }

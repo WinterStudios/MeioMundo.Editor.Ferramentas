@@ -25,5 +25,9 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
             else
                 return "Unknow";
         }
+        public static int? GetValue(string s)
+        {
+            return Disciplina.FirstOrDefault(x => x.Value == s).Key;
+        }
     }
 }

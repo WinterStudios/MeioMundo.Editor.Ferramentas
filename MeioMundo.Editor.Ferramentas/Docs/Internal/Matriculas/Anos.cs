@@ -35,5 +35,16 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
             string[] values = Ano.Values.ToArray();
             return values;
         }
+        public static string GetName(int index)
+        {
+            if (!Ano.ContainsKey(index))
+                return "";
+            return Ano[index];
+        }
+        public static int? GetValue(string name)
+        {
+            int value = Ano.First(x => x.Value == name).Key;
+            return value;
+        }
     }
 }

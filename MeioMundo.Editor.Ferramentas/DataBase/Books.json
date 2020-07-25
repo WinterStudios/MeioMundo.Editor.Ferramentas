@@ -1,10 +1,26 @@
 [
   {
-    "Ano": 1,
-    "Disciplina": "Portuges",
-    "ISBN": 9789897671500,
+    "Ano": 11,
+    "Disciplina": 10,
+    "ISBN": 9789896479886,
     "Nome": "Eureka! - Português - 1.º Ano",
     "Autor": "António Marcelino",
+    "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 11,
+    "Disciplina": 30,
+    "ISBN": 9789896479909,
+    "Nome": "Eureka! - Matematica - 1.º Ano",
+    "Autor": "Angelina Rodrigues",
+    "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 11,
+    "Disciplina": 60,
+    "ISBN": 9789897670978,
+    "Nome": "Eureka! - Estudo do Meio - 1.º Ano",
+    "Autor": "Angelina Rodrigues",
     "Editora": "Areal Editores"
   }
 ]
