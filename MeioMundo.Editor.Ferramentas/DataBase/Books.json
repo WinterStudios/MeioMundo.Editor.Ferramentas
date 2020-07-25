@@ -22,5 +22,13 @@
     "Nome": "Eureka! - Estudo do Meio - 1.º Ano",
     "Autor": "Angelina Rodrigues",
     "Editora": "Areal Editores"
+  },
+  {
+    "Ano": 12,
+    "Disciplina": 10,
+    "ISBN": 9789896479886,
+    "Nome": "Eureka! - Português - 1.º Ano",
+    "Autor": "António Marcelino",
+    "Editora": "Areal Editores"
   }
 ]

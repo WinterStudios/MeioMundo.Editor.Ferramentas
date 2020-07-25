@@ -20,7 +20,8 @@ namespace MeioMundo.Editor.Ferramentas.Docs
             switch (model)
             {
                 case Model.Matricula:
-                    return typeof(Matricula);
+                    //return typeof(Matricula);
+                    break;
                 default:
                     break;
             }

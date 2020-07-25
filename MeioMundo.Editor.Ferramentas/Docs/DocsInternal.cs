@@ -20,14 +20,14 @@ namespace MeioMundo.Editor.Ferramentas.Docs
 
 
 
-        public static string PluginStorageDataPath
+        public static string DataBaseDirectory
         {
             get
             {
                 string d = System.IO.Directory.GetCurrentDirectory() + "/DataBase/";
                 if (!System.IO.Directory.Exists(d))
                     System.IO.Directory.CreateDirectory(d);
-                return System.IO.Directory.GetCurrentDirectory() + "/DataBase/Books.json";
+                return System.IO.Directory.GetCurrentDirectory() + "/DataBase/";
                 
             }
         }

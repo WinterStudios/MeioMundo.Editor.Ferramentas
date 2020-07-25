@@ -22,31 +22,21 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Editor
     /// </summary>
     public partial class Livros : UserControl
     {
-        public List<Matriculas.Livros> Books { get; set; }
         public Livros()
         {
             InitializeComponent();
             LoadDataBase();
         }
 
-
-
-
-
-
-
         private void LoadDataBase()
         {
-            if(File.Exists(DocsInternal.PluginStorageDataPath))
-                Books = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Matriculas.Livros>>(File.ReadAllText(DocsInternal.PluginStorageDataPath));
-            else
-                Books = new List<Matriculas.Livros>();
-            UC_DataGrid_Livros.ItemsSource = Books;
+           
+            UC_DataGrid_Livros.ItemsSource = LivrosEngine.Livros;
         }
 
         private void MenuItem_Save_Click(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(Docs.DocsInternal.PluginStorageDataPath, Newtonsoft.Json.JsonConvert.SerializeObject(Books.GetSerialize(), Newtonsoft.Json.Formatting.Indented));
+            LivrosEngine.Save();
         }
     }
 }

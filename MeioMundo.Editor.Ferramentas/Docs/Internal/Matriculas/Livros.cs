@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,45 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
         public string Nome { get; set; }
         public string Autor { get; set; }
         public string Editora { get; set; }
+    }
+
+    public static class LivrosEngine
+    {
+        public static List<Livros> Livros { get; set; }
+
+        /// <summary>
+        /// Load Livros from a file
+        /// </summary>
+        public static void Load()
+        {
+            if (File.Exists(DocsInternal.DataBaseDirectory + "Book.json"))
+                Livros = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Matriculas.Livros>>(File.ReadAllText(DocsInternal.DataBaseDirectory + "Book.json"));
+            else
+                Livros = new List<Livros>();
+        }
+
+        /// <summary>
+        /// Save Livros in to a file
+        /// </summary>
+        public static void Save() => _Save(true);
+        /// <summary>
+        /// Save Livros in to a file
+        /// </summary>
+        /// <param name="format">Format the text for easy to understand</param>
+        public static void Save(bool format) => _Save(format);
+
+        /// <summary>
+        /// Save Livros in to a file
+        /// </summary>
+        /// <param name="format">Easy to Read</param>
+        private static void _Save(bool format)
+        {
+            Newtonsoft.Json.Formatting formatting = Newtonsoft.Json.Formatting.None;
+            if (format)
+                formatting = Newtonsoft.Json.Formatting.Indented;
+
+            File.WriteAllText(DocsInternal.DataBaseDirectory + "Book.json", Newtonsoft.Json.JsonConvert.SerializeObject(Livros.GetSerialize(), formatting));
+        }
     }
 
     public static class Extention

@@ -40,7 +40,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs
             switch (index)
             {
                 case 0:
-                    ContentControl = new Matriculas();
+                    ContentControl = new Internal.Editor.MatriculaEditor();
                     UC_DockPanel_Content.Children.Add((UserControl)ContentControl);
                     break;
             }

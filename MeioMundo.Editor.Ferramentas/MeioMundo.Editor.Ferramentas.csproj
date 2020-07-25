@@ -107,15 +107,18 @@
     <Compile Include="Docs\Internal\Editor\Livros.xaml.cs">
       <DependentUpon>Livros.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Docs\Internal\Editor\MatriculaEditor.xaml.cs">
+      <DependentUpon>MatriculaEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Docs\Internal\Matriculas\Anos.cs" />
-    <Compile Include="Docs\Internal\Matriculas\Componentes.cs" />
+    <Compile Include="Docs\Internal\Matriculas\DadosMatricula.cs" />
     <Compile Include="Docs\Internal\Matriculas\Disciplinas.cs" />
+    <Compile Include="Docs\Internal\Matriculas\Escola.cs" />
     <Compile Include="Docs\Internal\Matriculas\Livros.cs" />
     <Compile Include="Docs\Modelos.cs" />
-    <Compile Include="Docs\Models\Matricula.xaml.cs">
-      <DependentUpon>Matricula.xaml</DependentUpon>
+    <Compile Include="Docs\Models\Modelo_Matricula.xaml.cs">
+      <DependentUpon>Modelo_Matricula.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Docs\Models\Matriculas.cs" />
     <Compile Include="Docs\UC_DocumentosEngine.xaml.cs">
       <DependentUpon>UC_DocumentosEngine.xaml</DependentUpon>
     </Compile>
@@ -163,7 +166,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Docs\Models\Matricula.xaml">
+    <Page Include="Docs\Internal\Editor\MatriculaEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Docs\Internal\Matriculas\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Docs\Models\Modelo_Matricula.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

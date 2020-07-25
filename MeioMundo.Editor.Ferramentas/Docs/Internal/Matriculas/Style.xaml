@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas">
+
+    <local:DisciplinaConvert x:Key="DisciplinasConvert" />
+    
+    <Style x:Key="Matricula_DataGrid_Cell" TargetType="{x:Type DataGridCell}">
+        <Setter Property="BorderThickness" Value="0pt" />
+        <Setter Property="Background" Value="Red" />
+    </Style>
+
+    <Style x:Key="Matricula_DataGrid_Row" TargetType="{x:Type DataGridRow}">
+        <Setter Property="FontSize" Value="8pt" />
+        <Setter Property="FontFamily" Value="Calibri Light" />
+    </Style>
+
+
+    <Style x:Key="Matricula_DataGrid" TargetType="{x:Type DataGrid}">
+        <Setter Property="BorderThickness" Value="1px" />
+        <Setter Property="FontSize" Value="9pt" />
+        
+        <Setter Property="CellStyle" Value="{StaticResource Matricula_DataGrid_Cell}" />
+        <Setter Property="RowStyle" Value="{StaticResource Matricula_DataGrid_Row}" />
+    </Style>
+</ResourceDictionary>
