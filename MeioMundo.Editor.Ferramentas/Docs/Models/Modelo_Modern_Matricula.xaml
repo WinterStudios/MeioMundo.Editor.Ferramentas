@@ -1,14 +1,4 @@
-﻿<UserControl x:Class="MeioMundo.Editor.Ferramentas.Docs.Models.Modelo_Matricula"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Models"
-             xmlns:disciplinas="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas"
-             xmlns:editor="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Internal.Editor"
-             mc:Ignorable="d" Height="29.7cm" Width="21cm" 
-             Background="White"
-             SnapsToDevicePixels="False" RenderOptions.EdgeMode="Aliased" RenderOptions.BitmapScalingMode="NearestNeighbor" >
+﻿<UserControl x:Class="MeioMundo.Editor.Ferramentas.Docs.Models.Modelo_Modern_Matricula" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Models" xmlns:disciplinas="clr-namespace:MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas" mc:Ignorable="d" Height="29.7cm" Width="21cm" Background="White" SnapsToDevicePixels="True" RenderOptions.EdgeMode="Aliased" RenderOptions.BitmapScalingMode="Linear">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -16,7 +6,6 @@
                 <ResourceDictionary Source="/MeioMundo.Editor.Ferramentas;component/Docs/Internal/Matriculas/Style.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
     </UserControl.Resources>
 
     <Grid Margin="0.5cm">
@@ -25,11 +14,28 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel>
-            <Border Height="0.8cm" BorderThickness="0.5pt" BorderBrush="#FFA6A6A6" Background="#FFA6A6A6">
+            <StackPanel Orientation="Horizontal">
+                <Border Height="0.8cm" BorderThickness="0.5pt" BorderBrush="#FFA6A6A6" Background="#FFA6A6A6" Visibility="Visible" HorizontalAlignment="Left">
+                    <Grid Margin="0.2cm 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:Name="UC_TextBlock_Ano" Foreground="Black" FontSize="14pt" VerticalAlignment="Center" />
+                            <TextBlock Text=" - " Foreground="Black" FontSize="14pt" VerticalAlignment="Center" />
+                            <TextBox x:Name="UC_TextBlock_Escola" Text="Oliveira do Hospital" Foreground="Black" FontSize="14pt" FontWeight="Bold" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False" />
+                        </StackPanel>
+
+                    </Grid>
+                </Border>
+                <Polygon Points="0,0 20,30, 0,30" Fill="#FFA6A6A6" Stretch="Fill" />
+            </StackPanel>
+
+            <!--<Border Height="0.8cm" BorderThickness="0.5pt" BorderBrush="#FFA6A6A6" Background="#FFA6A6A6" Visibility="Hidden">
                 <Grid Margin="0.1cm 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*" />
@@ -38,14 +44,14 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock x:Name="UC_TextBlock_Ano" Foreground="Black" FontSize="14pt" VerticalAlignment="Center" />
                         <TextBlock Text=" - " Foreground="Black" FontSize="14pt" VerticalAlignment="Center" />
-                        <TextBox x:Name="UC_TextBlock_Escola" Text="Oliveira do Hospital" Foreground="Black" FontSize="14pt" FontWeight="Bold" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False" />
+                        <TextBlock x:Name="UC_TextBlock_Escola" Text="Oliveira do Hospital" Foreground="Black" FontSize="14pt" FontWeight="Bold" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Grid.Column="1" Orientation="Horizontal">
                         <TextBlock Text="Ano Letivo " Foreground="Black" FontSize="14pt" VerticalAlignment="Center" HorizontalAlignment="Right" />
                         <TextBlock Text="2020/2021" Foreground="Black" FontSize="14pt" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right" />
                     </StackPanel>
                 </Grid>
-            </Border>
+            </Border>-->
             <Border BorderThickness="0.5pt" BorderBrush="#FFA6A6A6" Height="0.4cm" Background="#FFFFCB23">
                 <TextBlock Text="Componente Geral" Foreground="Black" HorizontalAlignment="Center" FontFamily="Calibri Light" />
             </Border>
@@ -81,7 +87,7 @@
             </DataGrid>
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Vertical">
-            <Rectangle Fill="{StaticResource RightPatternBrush}" Height="0.2cm" Margin="0,0.2cm" />
+            <Rectangle Fill="{StaticResource RightPatternBrush}" Height="0.2cm" Margin="0,0,0,0.4cm" />
             <Border BorderThickness="0.25pt" BorderBrush="{StaticResource Color_Matricula_Border}">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -123,12 +129,44 @@
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.4cm" />
+                    <RowDefinition Height="0.4cm" MaxHeight="0.4cm" />
                     <RowDefinition MinHeight="0.5cm" Height="Auto" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                 </Grid.RowDefinitions>
-                <Border x:Name="UC_Border_List_CG_1" BorderThickness="0.5pt 0.5pt 0.5pt 0.25pt" Grid.Column="1" Grid.ColumnSpan="1" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
+                <Grid Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Bottom">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.5cm" />
+                    </Grid.RowDefinitions>
+                    <Border Height="0.7cm" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
+                        <TextBlock Text="MEGA" FontFamily="Calibri" FontSize="18pt" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <Border Grid.Row="1" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Height="0.5cm">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="SIM" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="1" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                            <Border Grid.Column="2" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="NÃO" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="3" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+                <Border x:Name="UC_Border_List_CG_1" BorderThickness="0.5pt 0.5pt 0.5pt 0.25pt" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="1" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
                     <TextBlock Text="Componente Geral" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Calibri Light" FontSize="9pt" />
                 </Border>
 
@@ -175,7 +213,7 @@
                         <Border Width="1cm" BorderThickness="0.25pt" BorderBrush="{StaticResource Color_Matricula_Border}" Background="{StaticResource Color_Matricula_Yellow}">
                             <TextBlock Text="OBS" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="9pt" FontFamily="Calibri Light" />
                         </Border>
-                        <Border  BorderThickness="0.25pt" BorderBrush="{StaticResource Color_Matricula_Border}" />
+                        <Border BorderThickness="0.25pt" BorderBrush="{StaticResource Color_Matricula_Border}" />
                     </DockPanel>
                     <DockPanel Grid.Row="1">
                         <Border Width="3cm" BorderThickness="0.25pt" BorderBrush="{StaticResource Color_Matricula_Border}" Background="{StaticResource Color_Matricula_Yellow}">
@@ -230,15 +268,49 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="4cm" />
                     <ColumnDefinition MinWidth="2cm" Width="Auto" />
-                    <ColumnDefinition MinWidth="0cm" Width="1cm" MaxWidth="1cm" />
+                    <ColumnDefinition MinWidth="0cm" Width="1cm" />
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.4cm" />
+                    <RowDefinition Height="0.4cm" MaxHeight="0.4cm" />
                     <RowDefinition MinHeight="0.5cm" Height="Auto" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                 </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Bottom">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.5cm" />
+                    </Grid.RowDefinitions>
+                    <Border Height="0.7cm" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
+                        <TextBlock Text="MEGA" FontFamily="Calibri" FontSize="18pt" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <Border Grid.Row="1" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Height="0.5cm">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="SIM" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="1" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                            <Border Grid.Column="2" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="NÃO" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="3" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Grid>
+
+
+
                 <Border x:Name="UC_Border_List_CG_2" BorderThickness="0.5pt 0.5pt 0.5pt 0.25pt" Grid.Column="1" Grid.ColumnSpan="1" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
                     <TextBlock Text="Componente Geral" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Calibri Light" FontSize="9pt" />
                 </Border>
@@ -345,11 +417,43 @@
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.4cm" />
+                    <RowDefinition Height="0.4cm" MaxHeight="0.4cm" />
                     <RowDefinition MinHeight="0.5cm" Height="Auto" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                 </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Bottom">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.5cm" />
+                    </Grid.RowDefinitions>
+                    <Border Height="0.7cm" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
+                        <TextBlock Text="MEGA" FontFamily="Calibri" FontSize="18pt" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <Border Grid.Row="1" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Height="0.5cm">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="SIM" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="1" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                            <Border Grid.Column="2" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="NÃO" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="3" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Grid>
+
                 <Border x:Name="UC_Border_List_CG_3" BorderThickness="0.5pt 0.5pt 0.5pt 0.25pt" Grid.Column="1" Grid.ColumnSpan="1" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
                     <TextBlock Text="Componente Geral" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Calibri Light" FontSize="9pt" />
                 </Border>
@@ -358,7 +462,6 @@
                     <TextBlock Text="Componente Especifica" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Calibri Light" FontSize="9pt" />
                 </Border>
                 <ListBox x:Name="UC_ListView_CG_3" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="3" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ListBoxItemStyle2}" Style="{StaticResource ListBoxStyle1}" ItemTemplate="{DynamicResource UC_ListView_DisciplinasManuaus}" />
-
                 <Border x:Name="UC_Border_Select_3" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Background="{StaticResource RightPatternBrush}" />
                 <ListBox x:Name="UC_ListView_CE_3" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="3" BorderBrush="{x:Null}" ItemContainerStyle="{DynamicResource ListBoxItemStyle2}" Style="{StaticResource ListBoxStyle1}" ItemTemplate="{DynamicResource UC_ListView_DisciplinasManuaus}" />
 
@@ -413,6 +516,7 @@
                 </Grid>
             </Border>
         </StackPanel>
+        
         <StackPanel Grid.Row="4" Orientation="Vertical" x:Name="UC_StackPanel_Op1">
             <Rectangle Fill="{StaticResource RightPatternBrush}" Height="0.2cm" Margin="0,0.4cm" />
             <Border BorderThickness="0.25pt" BorderBrush="{StaticResource Color_Matricula_Border}">
@@ -456,11 +560,42 @@
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.4cm" />
+                    <RowDefinition Height="0.4cm" MaxHeight="0.4cm" />
                     <RowDefinition MinHeight="0.5cm" Height="Auto" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                     <RowDefinition Height="0.5cm" MaxHeight="0.5cm" />
                 </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Bottom">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="0.5cm" />
+                    </Grid.RowDefinitions>
+                    <Border Height="0.7cm" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
+                        <TextBlock Text="MEGA" FontFamily="Calibri" FontSize="18pt" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <Border Grid.Row="1" BorderThickness="0.5pt 0.5pt 0.25pt 0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}" Height="0.5cm">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="SIM" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="1" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                            <Border Grid.Column="2" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <TextBlock Text="NÃO" FontSize="9pt" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <Border Grid.Column="3" BorderThickness="0.25pt" BorderBrush="{DynamicResource Color_Matricula_Border}">
+                                <Ellipse Width="0.3cm" Height="0.3cm" Stroke="{StaticResource Color_Matricula_Yellow}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                </Grid>
                 <Border x:Name="UC_Border_List_CG_4" BorderThickness="0.5pt 0.5pt 0.5pt 0.25pt" Grid.Column="1" Grid.ColumnSpan="3" BorderBrush="{DynamicResource Color_Matricula_Border}" Background="{DynamicResource Color_Matricula_Yellow}">
                     <TextBlock Text="Componente Geral" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Calibri Light" FontSize="9pt" />
                 </Border>
@@ -522,16 +657,17 @@
             </Border>
         </StackPanel>
 
-        <Border Grid.Row="5">
+
+        <Border Grid.Row="4">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Mod: v.2020/07" FontSize="5pt" FontFamily="Calibri Light" FontWeight="ExtraLight" VerticalAlignment="Bottom" Foreground="#FF404040" />
-                <TextBlock Grid.Column="1" Text="v.0805.1251" FontSize="5pt" FontFamily="Calibri Light" FontWeight="ExtraLight" VerticalAlignment="Bottom" HorizontalAlignment="Right" Foreground="#FF404040" />
+                <TextBlock Text="Mod: v.20.0805.1041" FontSize="5pt" FontFamily="Calibri Light" FontWeight="ExtraLight" VerticalAlignment="Bottom" Foreground="#FF202020" />
+                <Rectangle Grid.Column="1" Stroke="{DynamicResource Color_Matricula_Border}" StrokeThickness="0.5pt" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="0.5cm" Width="0.5cm" />
             </Grid>
         </Border>
-        
+
     </Grid>
 </UserControl>

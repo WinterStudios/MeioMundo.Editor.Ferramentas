@@ -25,14 +25,14 @@
             <MenuItem Header="Save" Click="MenuItem_Save_Click" />
         </Menu>
 
-        <DataGrid x:Name="UC_DataGrid_Livros" Grid.Row="1" CanUserAddRows="True" AutoGenerateColumns="False">
+        <DataGrid x:Name="UC_DataGrid_Livros" Grid.Row="1" CanUserAddRows="True" AutoGenerateColumns="False" CellEditEnding="UC_DataGrid_Livros_CellEditEnding">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" Header="Nome" Binding="{Binding Nome}" />
-                <DataGridTextColumn Width="90" Header="ISBN" Binding="{Binding ISBN}" />
+                <DataGridTextColumn Width="90" Header="ISBN" Binding="{Binding ISBN, StringFormat=d}" />
                 <DataGridTextColumn Width="120" Header="Autor" Binding="{Binding Autor}" />
                 <DataGridTextColumn Width="120" Header="Editora" Binding="{Binding Editora}" />
                 <DataGridTextColumn Width="100" Header="Disciplina" Binding="{Binding Disciplina}"/>
-                <DataGridTextColumn Width="60" Header="Ano" Binding="{Binding Ano}" />
+                <DataGridTextColumn Width="100" Header="Ano" Binding="{Binding Ano}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

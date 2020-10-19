@@ -20,7 +20,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
     /// <summary>
     /// Interaction logic for Matricula.xaml
     /// </summary>
-    public partial class Modelo_Matricula : UserControl
+    public partial class Modelo_Modern_Matricula : UserControl
     {
         public string AnoLectivo { get => UC_TextBlock_Ano.Text; set => UC_TextBlock_Ano.Text = value; }
         public int _Ano;
@@ -28,8 +28,11 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
         public List<_Disciplina> Disciplinas { get => Editor.DadosMatricula.Componetes[_Ano].ToList(); set => Editor.DadosMatricula.Componetes[_Ano] = value.ToArray(); }
         public Internal.Editor.MatriculaEditor Editor { get; set; }
         private bool _EnsinoSuperior;
-        public bool EnsinoSuperior { get => _EnsinoSuperior; 
-            set {
+        public bool EnsinoSuperior
+        {
+            get => _EnsinoSuperior;
+            set
+            {
                 bool b = value;
                 _EnsinoSuperior = b;
                 if (b)
@@ -76,7 +79,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                     UC_Border_List_CE_3.Visibility = Visibility.Collapsed;
                 }
             }
-        }        
+        }
         public bool Primeiro_Ciclo { get; set; }
         public int CompGeral { get; private set; }
         public int CompEspecifica { get; private set; }
@@ -124,7 +127,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
         public List<string> DisciplinasGeralNomes { get; set; }
         public List<string> DisciplinasEspecificasNomes { get; set; }
 
-        public Modelo_Matricula()
+        public Modelo_Modern_Matricula()
         {
             InitializeComponent();
             // Disciplinas = new List<_Disciplina>();
@@ -140,7 +143,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
 
         public void LoadCoponentes()
         {
-            
+
         }
         public void FillTablesEmpty()
         {
@@ -162,7 +165,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
 
                 if (remainingCG < 1 && remainingCE > 0)
                     remainingCE--;
-                if( remainingCG > 0 && (remainingCE <= 0 || remainingCE > 0))
+                if (remainingCG > 0 && (remainingCE <= 0 || remainingCE > 0))
                     remainingCG--;
 
                 for (int i = 0; i < remainingCG; i++)
@@ -201,7 +204,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                 {
                     _dg.Add(new _Disciplina());
                 }
-                
+
                 string[] nomesDis = _dg.Select(x => x.Disciplina).GetNames().ToArray();
                 for (int i = 0; i < _dg.Count; i++)
                 {
@@ -212,6 +215,8 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                         s.Nome = string.Format("{0}", Internal.Matriculas.Disciplinas.GetName(_dg[i].Disciplina));
                     if (_dg[i].OP2)
                         s.OP2 = new SolidColorBrush(Color.FromRgb(191, 191, 191));
+                    if (_dg[i].Disciplina == 0)
+                        s.EmptyRow = Visibility.Visible;
                     req_DG.Add(s);
                 }
                 List<_Disciplina> _de = new List<_Disciplina>(disciplinasEspecifica.Where(x => x.OP1 != true && x.Disciplina != 0));
@@ -224,10 +229,11 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                 {
                     SelectListManuais s = new SelectListManuais();
                     s.Nome = Internal.Matriculas.Disciplinas.GetName(_de[i].Disciplina);
-                    if(_de[i].OP2)
+                    if (_de[i].OP2)
                         s.OP2 = new SolidColorBrush(Color.FromRgb(191, 191, 191));
                     req_DE.Add(s);
-
+                    if (_de[i].Disciplina == 0)
+                        s.EmptyRow = Visibility.Visible;
 
                 }
                 //DisciplinasGeralNomes = _dsa.Select(x => x.Disciplina).GetNames().ToList();
@@ -237,7 +243,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                 UC_ListView_CG_1.ItemsSource = req_DG;
                 UC_ListView_CG_2.ItemsSource = req_DG;
                 UC_ListView_CG_3.ItemsSource = req_DG;
-                
+
 
                 UC_ListView_CE_1.ItemsSource = req_DE;
                 UC_ListView_CE_2.ItemsSource = req_DE;
@@ -293,6 +299,8 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                         s.Nome = string.Format("{0}\n{1}", Internal.Matriculas.Disciplinas.GetName(_dg[i].Disciplina), "(Fichas Obrigatorias)");
                         s.FichasObrigatoriasBox = Visibility.Visible;
                     }
+                    if (_dg[i].Disciplina == 0)
+                        s.EmptyRow = Visibility.Visible;
                     req_DG.Add(s);
                 }
 
@@ -320,12 +328,12 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
         private void UC_DataGrid_CG_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
             DataGridColumn column = e.Column;
-            if(column.Header.ToString() == "ISBN")
+            if (column.Header.ToString() == "ISBN")
             {
-            
+
                 string isbn = ((TextBox)e.EditingElement).Text;
                 long code = 0;
-                long.TryParse(isbn.Replace("-","").Replace(" ",""), out code);
+                long.TryParse(isbn.Replace("-", "").Replace(" ", ""), out code);
                 _Disciplina row = new _Disciplina();
                 if (isbn == "0" || code == 0)
                 {
@@ -357,11 +365,11 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                 //UC_DataGrid_CG.ItemsSource = Disciplinas;
 
                 DadosMatricula_Engine.Update(_Ano, row);
-            
+
                 UC_DataGrid_CG.Dispatcher.BeginInvoke(new Action(() => UC_DataGrid_CG.Items.Refresh()), System.Windows.Threading.DispatcherPriority.Background);
-                
+
             }
-            if(column.Header.ToString() == "Disciplina")
+            if (column.Header.ToString() == "Disciplina")
             {
                 _Disciplina row = (_Disciplina)UC_DataGrid_CG.SelectedItem;
                 int Id_dis = 0;
@@ -445,11 +453,11 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                     disciplina.Editora = livro.Editora;
                     disciplina.Nome = livro.Nome;
                     disciplina.Superior = false;
-                    
+
                     DadosMatricula_Engine.Update(_Ano, disciplina);
                 }
 
-                if(e.Data.GetDataPresent(typeof(int)))
+                if (e.Data.GetDataPresent(typeof(int)))
                 {
                     _Disciplina disciplina = disciplinasGeral.First(x => x.Disciplina == 0);
                     disciplina.Disciplina = (int)e.Data.GetData(typeof(int));
@@ -483,30 +491,6 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Models
                 UC_DataGrid_CE.Dispatcher.BeginInvoke(new Action(() => UC_DataGrid_CE.Items.Refresh()), System.Windows.Threading.DispatcherPriority.Background);
 
             }
-        }
-    }
-    public class SelectListManuais
-    {
-        public string Nome { get; set; }
-        public SolidColorBrush OP1 { get; set; }
-        public SolidColorBrush OP2 { get; set; }
-        public SolidColorBrush OP3 { get; set; }
-        public string Fichas { get; set; }
-        public Visibility FichasObrigatoriasBox { get; set; }
-        public Visibility EmptyRow { get; set; }
-        public double GridWidth { get; set; }
-        public bool Primaria { get; set; }
-        public SelectListManuais()
-        {
-            Nome = ""; 
-            OP1 = new SolidColorBrush();
-            OP2 = new SolidColorBrush();
-            OP3 = new SolidColorBrush();
-            Fichas = "";
-            FichasObrigatoriasBox = Visibility.Collapsed;
-            EmptyRow = Visibility.Collapsed;
-            GridWidth = (double)new LengthConverter().ConvertFrom("1cm");
-            Primaria = false;
         }
     }
 }

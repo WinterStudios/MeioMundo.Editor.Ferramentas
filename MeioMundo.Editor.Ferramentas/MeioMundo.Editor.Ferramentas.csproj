@@ -95,8 +95,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\Extensions\CSV.cs" />
-    <Compile Include="API\FILE\CSV.cs" />
     <Compile Include="Barcode\Barcode.xaml.cs">
       <DependentUpon>Barcode.xaml</DependentUpon>
     </Compile>
@@ -104,6 +102,7 @@
     <Compile Include="Barcode\Internal\CODE_39.cs" />
     <Compile Include="Barcode\Internal\Internal.cs" />
     <Compile Include="Docs\DocsInternal.cs" />
+    <Compile Include="Docs\Internal\Editor\ListViewTempleteSelection_Modelo.cs" />
     <Compile Include="Docs\Internal\Editor\Livros.xaml.cs">
       <DependentUpon>Livros.xaml</DependentUpon>
     </Compile>
@@ -115,9 +114,15 @@
     <Compile Include="Docs\Internal\Matriculas\Disciplinas.cs" />
     <Compile Include="Docs\Internal\Matriculas\Escola.cs" />
     <Compile Include="Docs\Internal\Matriculas\Livros.cs" />
+    <Compile Include="Docs\Internal\Matriculas\VerticalTextBlock.xaml.cs">
+      <DependentUpon>VerticalTextBlock.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Docs\Modelos.cs" />
     <Compile Include="Docs\Models\Modelo_Matricula.xaml.cs">
       <DependentUpon>Modelo_Matricula.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Docs\Models\Modelo_Modern_Matricula.xaml.cs">
+      <DependentUpon>Modelo_Modern_Matricula.xaml</DependentUpon>
     </Compile>
     <Compile Include="Docs\UC_DocumentosEngine.xaml.cs">
       <DependentUpon>UC_DocumentosEngine.xaml</DependentUpon>
@@ -135,12 +140,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Website\ManagerStocks.xaml.cs">
-      <DependentUpon>ManagerStocks.xaml</DependentUpon>
+    <Compile Include="Website\Internal\Categoria.cs" />
+    <Compile Include="Website\Internal\CategoriaEngine.cs" />
+    <Compile Include="Website\Internal\Manager.cs" />
+    <Compile Include="Website\Internal\ProductCreater.xaml.cs">
+      <DependentUpon>ProductCreater.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Website\ManagerStocksInternal.cs" />
-    <Compile Include="Website\WindowPopUp.xaml.cs">
-      <DependentUpon>WindowPopUp.xaml</DependentUpon>
+    <Compile Include="Website\Internal\ProductInternal.cs" />
+    <Compile Include="Website\WebSiteManagerInternal.cs" />
+    <Compile Include="Website\WebSiteManager.xaml.cs">
+      <DependentUpon>WebSiteManager.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -176,7 +185,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Docs\Internal\Matriculas\VerticalTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Docs\Models\Modelo_Matricula.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Docs\Models\Modelo_Modern_Matricula.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,15 +213,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Website\Dictionary1.xaml">
+    <Page Include="Styles\Default\TabControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Website\ManagerStocks.xaml">
+    <Page Include="Website\Internal\ProductCreater.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Website\WindowPopUp.xaml">
+    <Page Include="Website\WebSiteManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,5 +1,4 @@
-﻿using MeioMundo.Editor.Ferramentas.API.FILE;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MeioMundo.Editor.Ferramentas.Website
+namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
 {
     /// <summary>
-    /// Interaction logic for ManagerStocks.xaml
+    /// Interaction logic for VerticalTextBlock.xaml
     /// </summary>
-    public partial class ManagerStocks : UserControl
+    public partial class VerticalTextBlock : UserControl
     {
-        public ManagerStocks()
+        public VerticalTextBlock()
         {
             InitializeComponent();
-        }
-
-        private void openCSV_Click(object sender, RoutedEventArgs e)
-        {
-
-            table.DataContext = CSV.GetTable().DefaultView;
         }
     }
 }

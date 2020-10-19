@@ -53,8 +53,8 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
         /// </summary>
         public static void Load()
         {
-            if (File.Exists(DocsInternal.DataBaseDirectory + "Book.json"))
-                Livros = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Matriculas.Livros>>(File.ReadAllText(DocsInternal.DataBaseDirectory + "Book.json"));
+            if (File.Exists(DocsInternal.DataBaseDirectory + "Books.json"))
+                Livros = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Matriculas.Livros>>(File.ReadAllText(DocsInternal.DataBaseDirectory + "Books.json"));
             else
                 Livros = new List<Livros>();
         }
@@ -79,7 +79,15 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
             if (format)
                 formatting = Newtonsoft.Json.Formatting.Indented;
 
-            File.WriteAllText(DocsInternal.DataBaseDirectory + "Book.json", Newtonsoft.Json.JsonConvert.SerializeObject(Livros.GetSerialize(), formatting));
+            File.WriteAllText(DocsInternal.DataBaseDirectory + "Books.json", Newtonsoft.Json.JsonConvert.SerializeObject(Livros.GetSerialize().OrderBy(x => x.Ano).ThenBy(x=> x.Disciplina), formatting));
+        }
+        public static IEnumerable<Livros> GetLivrosWithCiclo(int ano)
+        {
+            List<Livros> livros = new List<Livros>();
+            int ciclo = Anos.GetCiclo(ano);
+            livros.AddRange(Livros.Where(x => x.Ano == Anos.GetName(ciclo)));
+            livros.AddRange(Livros.Where(x => x.Ano == Anos.GetName(ano)));
+            return livros;
         }
     }
 

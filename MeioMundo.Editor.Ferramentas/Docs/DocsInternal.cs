@@ -13,7 +13,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs
     {
         public string Nome => "Criador de Documentos";
         public string Descrição => "";
-        public VersionSystem Version => VersionSystem.SetVersion("v.0.0.723-alpha.1");
+        public VersionSystem Version => VersionSystem.SetVersion("v.1.0.818-rc.1");
         public PluginType Type => PluginType.TabPage;
         public string args => "Ferramentas/Documentos";
         public Type ObjectType => typeof(UC_DocumentosEngine);

@@ -13,13 +13,64 @@
             <RowDefinition MinHeight="24" Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal">
             <ComboBox x:Name="UC_ComboBox_Escola" HorizontalAlignment="Left" Width="200" SelectionChanged="UC_ComboBox_Escola_SelectionChanged" />
-            <ComboBox x:Name="UC_ComboBox_Ano" Width="120" SelectionChanged="UC_ComboBox_Ano_SelectionChanged"/>
+            <ComboBox x:Name="UC_ComboBox_Ano" Width="120" SelectionChanged="UC_ComboBox_Ano_SelectionChanged" />
             <Button x:Name="UC_Button_SaveDados" Content="Guardar" Click="UC_Button_SaveDados_Click" Padding="20,0" />
+            <Button x:Name="UC_Button_Print" Content="Imprimir" Click="UC_Button_Print_Click" Padding="20,0" />
             <CheckBox x:Name="UC_CheckBox_Editor" Content="Editar" Margin="20,0" VerticalContentAlignment="Center" Width="60" HorizontalContentAlignment="Center" Click="UC_CheckBox_Editor_Click" />
+            <Button x:Name="UC_Button_LivrosEditor" Content="Livros" Click="UC_Button_LivrosEditor_Click" Padding="20,0" />
+            <ComboBox x:Name="UC_ComboBox_ModelVersion" SelectionChanged="UC_ComboBox_ModelVersion_SelectionChanged">
+                <ComboBoxItem Content="v.2020/07" />
+                <ComboBoxItem Content="v.2020/08" />
+            </ComboBox>
         </StackPanel>
+        <ScrollViewer Grid.Row="1" BorderThickness="1" BorderBrush="Black">
+            <Viewbox Stretch="UniformToFill">
+                <DockPanel x:Name="UC_DockPanel_Modelo" Grid.Row="1" />
+            </Viewbox>
+        </ScrollViewer>
 
-        <DockPanel x:Name="UC_DockPanel_Modelo" Grid.Row="1"/>
+        <TabControl Grid.Column="1" Grid.RowSpan="2">
+            <TabItem Header="Livros">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <DockPanel>
+                        <TextBlock Text="Search" Margin="10,0" />
+                        <TextBox />
+                    </DockPanel>
+                    <DataGrid x:Name="UC_TabPage_TI_DG_Livros" Grid.Row="1" Margin="0,5" AutoGenerateColumns="False" IsReadOnly="True" AllowDrop="True" MouseMove="UC_TabPage_TI_DG_Livros_MouseMove">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nome" Width="*" Binding="{Binding Nome}" />
+                            <DataGridTextColumn Header="Ano" Width="50" Binding="{Binding Ano}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Disciplinas">
+                <Grid>
+                    <DataGrid x:Name="UC_TabPage_TI_Disciplinas" Grid.Row="1" Margin="0,5" AutoGenerateColumns="False" IsReadOnly="True" AllowDrop="True" MouseMove="UC_TabPage_TI_Disciplinas_MouseMove">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Width="50" Binding="{Binding Key}" />
+                            <DataGridTextColumn Header="Nome" Width="*" Binding="{Binding Value}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                <!--<DataGrid x:Name="UC_TabPage_TI_DG_Disciplinas" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" HeadersVisibility="Column" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Width="50" Binding="{Binding Key}" />
+                        <DataGridTextColumn Header="Nome" Width="*" Binding="{Binding Value}" />
+                    </DataGrid.Columns>
+                </DataGrid>-->
+            </TabItem>
+        </TabControl>
+        
     </Grid>
 </UserControl>

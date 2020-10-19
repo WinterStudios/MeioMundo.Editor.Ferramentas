@@ -22,6 +22,7 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Editor
     /// </summary>
     public partial class Livros : UserControl
     {
+
         public Livros()
         {
             InitializeComponent();
@@ -37,6 +38,23 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Editor
         private void MenuItem_Save_Click(object sender, RoutedEventArgs e)
         {
             LivrosEngine.Save();
+        }
+
+        private void UC_DataGrid_Livros_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            DataGridColumn column = e.Column;
+            if (column.Header.ToString() == "ISBN")
+            {
+                string s = ((TextBox)e.EditingElement).Text;
+                if (string.IsNullOrEmpty(s))
+                    return;
+                s = s.Replace("-", "");
+                Matriculas.Livros row = (Matriculas.Livros)UC_DataGrid_Livros.SelectedItem;
+                row.ISBN = long.Parse(s);
+
+                ((TextBox)e.EditingElement).Text = s;
+
+            }
         }
     }
 }

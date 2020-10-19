@@ -28,15 +28,20 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
                 keys.Add(32, "8º Ano");
                 keys.Add(33, "9º Ano");
 
-                keys.Add(400, "Secundario");
+                // Secundario
+                keys.Add(400, "10º Ano");
                 keys.Add(401, "10º Ano - Cientifico");
                 keys.Add(402, "10º Ano - Humanidades");
                 keys.Add(403, "10º Ano - Arte");
                 keys.Add(404, "10º Ano - Economia");
+
+                keys.Add(410, "11º Ano");
                 keys.Add(411, "11º Ano - Cientifico");
                 keys.Add(412, "11º Ano - Humanidades");
                 keys.Add(413, "11º Ano - Arte");
                 keys.Add(414, "11º Ano - Economia");
+
+                keys.Add(420, "12º Ano");
                 keys.Add(421, "12º Ano - Cientifico");
                 keys.Add(422, "12º Ano - Humanidades");
                 keys.Add(423, "12º Ano - Arte");
@@ -76,5 +81,25 @@ namespace MeioMundo.Editor.Ferramentas.Docs.Internal.Matriculas
             int value = Ano.First(x => x.Value == name).Key;
             return value;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ano"></param>
+        /// <returns>Returna o valor do ciclo </returns>
+        /// <example>[i]00</example>
+        public static int GetCiclo(int ano)
+        {
+            int ciclo = 0;
+            string _ano = ano.ToString();
+            if (ano < 100)
+                ciclo = int.Parse(ano.ToString()[0].ToString() + "0");
+            else
+                ciclo = int.Parse(string.Format("{0}{1}0", _ano[0], _ano[1]));
+            return ciclo;
+        }
+    }
+    public static class AnosExtention
+    {
+        //public static int[] GetAnosID(this string)
     }
 }
